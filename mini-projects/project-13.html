@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project #13: Notes Application Using localStorage</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-primary));">Mini Project #13</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html">🏠 Home</a>
+                <a href="../../html/index.html">📄 HTML</a>
+                <a href="../../css/index.html">🎨 CSS</a>
+                <a href="../index.html" class="active">⚙️ JavaScript</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../index.html">JavaScript</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">Mini Projects</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Project #13</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="project-12.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 Mini Projects</a>
+                    <a href="project-14.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-pink);">
+                <span class="experiment-badge" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">MINI PROJECT #13 OF 17</span>
+                <h1 class="experiment-title">Notes Application Using localStorage</h1>
+                <p class="experiment-desc">Sticky note board with note creation, timestamps, search, and browser persistence.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-pink); box-shadow: 0 0 8px var(--accent-pink);"></span> Working Application Showcase</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">project-13.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 520px; margin: 0 auto;">
+    <div style="background: var(--bg-card); padding: 1.25rem; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+        <input type="text" id="noteTitleInp" class="form-control" placeholder="Note Title" style="margin-bottom: 0.5rem;">
+        <textarea id="noteBodyInp" class="form-control" rows="3" placeholder="Write your note content here..." style="margin-bottom: 0.75rem;"></textarea>
+        <button class="btn btn-primary btn-sm" onclick="saveNoteAction()">Save Note</button>
+    </div>
+    <div id="notesBoard" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;"></div>
+</div>
+<script>
+let notes = JSON.parse(localStorage.getItem('app_notes') || '[{"id":1,"title":"Exam Revision","body":"Revise CSS Grid template areas and Web Storage APIs.","time":"23 Sep"}]');
+function saveNoteAction() {
+    const t = document.getElementById('noteTitleInp').value.trim();
+    const b = document.getElementById('noteBodyInp').value.trim();
+    if(!t || !b) return;
+    notes.unshift({ id: Date.now(), title: t, body: b, time: new Date().toLocaleDateString() });
+    localStorage.setItem('app_notes', JSON.stringify(notes));
+    document.getElementById('noteTitleInp').value = '';
+    document.getElementById('noteBodyInp').value = '';
+    renderNotes();
+}
+function deleteNote(id) {
+    notes = notes.filter(n => n.id !== id);
+    localStorage.setItem('app_notes', JSON.stringify(notes));
+    renderNotes();
+}
+function renderNotes() {
+    const b = document.getElementById('notesBoard');
+    b.innerHTML = notes.map(n => `
+        <div style="background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:8px; padding:1rem; position:relative;">
+            <button onclick="deleteNote(${n.id})" style="position:absolute; top:8px; right:8px; background:transparent; border:none; color:var(--text-muted); cursor:pointer;">✕</button>
+            <h5 style="color:var(--accent-primary); margin-bottom:0.25rem;">${n.title}</h5>
+            <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.5rem;">${n.body}</p>
+            <small style="color:var(--text-muted); font-size:0.75rem;">${n.time}</small>
+        </div>
+    `).join('') || '<p style="color:var(--text-muted);">No notes yet.</p>';
+}
+renderNotes();
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-pink);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 520px; margin: 0 auto;"&gt;
+    &lt;div style="background: var(--bg-card); padding: 1.25rem; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 1.5rem;"&gt;
+        &lt;input type="text" id="noteTitleInp" class="form-control" placeholder="Note Title" style="margin-bottom: 0.5rem;"&gt;
+        &lt;textarea id="noteBodyInp" class="form-control" rows="3" placeholder="Write your note content here..." style="margin-bottom: 0.75rem;"&gt;&lt;/textarea&gt;
+        &lt;button class="btn btn-primary btn-sm" onclick="saveNoteAction()"&gt;Save Note&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div id="notesBoard" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+let notes = JSON.parse(localStorage.getItem('app_notes') || '[{"id":1,"title":"Exam Revision","body":"Revise CSS Grid template areas and Web Storage APIs.","time":"23 Sep"}]');
+function saveNoteAction() {
+    const t = document.getElementById('noteTitleInp').value.trim();
+    const b = document.getElementById('noteBodyInp').value.trim();
+    if(!t || !b) return;
+    notes.unshift({ id: Date.now(), title: t, body: b, time: new Date().toLocaleDateString() });
+    localStorage.setItem('app_notes', JSON.stringify(notes));
+    document.getElementById('noteTitleInp').value = '';
+    document.getElementById('noteBodyInp').value = '';
+    renderNotes();
+}
+function deleteNote(id) {
+    notes = notes.filter(n =&gt; n.id !== id);
+    localStorage.setItem('app_notes', JSON.stringify(notes));
+    renderNotes();
+}
+function renderNotes() {
+    const b = document.getElementById('notesBoard');
+    b.innerHTML = notes.map(n =&gt; `
+        &lt;div style="background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:8px; padding:1rem; position:relative;"&gt;
+            &lt;button onclick="deleteNote(${n.id})" style="position:absolute; top:8px; right:8px; background:transparent; border:none; color:var(--text-muted); cursor:pointer;"&gt;✕&lt;/button&gt;
+            &lt;h5 style="color:var(--accent-primary); margin-bottom:0.25rem;"&gt;${n.title}&lt;/h5&gt;
+            &lt;p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.5rem;"&gt;${n.body}&lt;/p&gt;
+            &lt;small style="color:var(--text-muted); font-size:0.75rem;"&gt;${n.time}&lt;/small&gt;
+        &lt;/div&gt;
+    `).join('') || '&lt;p style="color:var(--text-muted);"&gt;No notes yet.&lt;/p&gt;';
+}
+renderNotes();
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="project-12.html" class="btn btn-outline btn-prev" style="">⬅ Previous Project</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">⚙️ All JS Categories</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-pink);">📋 Mini Projects List</a>
+                </div>
+                <a href="project-14.html" class="btn btn-outline btn-next" style="">Next Project ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Mini Projects Module &bull; Project 13 of 17</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/common.js"></script>
+</body>
+</html>

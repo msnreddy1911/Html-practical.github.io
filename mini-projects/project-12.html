@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project #12: Simple Shopping Cart Application</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-primary));">Mini Project #12</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html">🏠 Home</a>
+                <a href="../../html/index.html">📄 HTML</a>
+                <a href="../../css/index.html">🎨 CSS</a>
+                <a href="../index.html" class="active">⚙️ JavaScript</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../index.html">JavaScript</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">Mini Projects</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Project #12</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="project-11.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 Mini Projects</a>
+                    <a href="project-13.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-pink);">
+                <span class="experiment-badge" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">MINI PROJECT #12 OF 17</span>
+                <h1 class="experiment-title">Simple Shopping Cart Application</h1>
+                <p class="experiment-desc">E-commerce store with catalog items, quantity controls, cart subtotal, and checkout modal.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-pink); box-shadow: 0 0 8px var(--accent-pink);"></span> Working Application Showcase</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">project-12.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem;">
+    <div>
+        <h4 style="color: var(--text-primary); margin-bottom: 0.75rem;">Product Catalog</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem;">
+            <div style="background: var(--bg-card); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;">
+                <div style="font-size: 2rem;">💻</div>
+                <strong>Pro Laptop</strong>
+                <p style="color: var(--accent-teal); margin: 0.25rem 0 0.5rem;">$899</p>
+                <button class="btn btn-outline btn-sm" onclick="addShopItem('Pro Laptop', 899)">Add to Cart</button>
+            </div>
+            <div style="background: var(--bg-card); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;">
+                <div style="font-size: 2rem;">🎧</div>
+                <strong>Headphones</strong>
+                <p style="color: var(--accent-teal); margin: 0.25rem 0 0.5rem;">$129</p>
+                <button class="btn btn-outline btn-sm" onclick="addShopItem('Headphones', 129)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div style="background: var(--bg-card); padding: 1.25rem; border-radius: 8px; border: 1px solid var(--border-color);">
+        <h4 style="color: var(--text-primary); margin-bottom: 0.75rem;">Cart Summary</h4>
+        <ul id="cartItemsMini" style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; margin-bottom: 1rem;"></ul>
+        <div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 1rem;">
+            <span>Total:</span> <span id="cartTotalPrice" style="color: var(--accent-teal);">$0</span>
+        </div>
+        <button class="btn btn-primary btn-sm" style="width: 100%;" onclick="alert('Checkout completed! Order placed.')">Checkout</button>
+    </div>
+</div>
+<script>
+let cart = [];
+function addShopItem(name, price) {
+    const exist = cart.find(i => i.name === name);
+    if(exist) exist.qty++; else cart.push({ name, price, qty: 1 });
+    renderShopCart();
+}
+function renderShopCart() {
+    const ul = document.getElementById('cartItemsMini');
+    let tot = 0;
+    ul.innerHTML = cart.length ? cart.map(i => {
+        tot += i.price * i.qty;
+        return `<li style="display:flex; justify-content:space-between;"><span>${i.name} &times; ${i.qty}</span><span>$${i.price * i.qty}</span></li>`;
+    }).join('') : '<li style="color:var(--text-muted);">Cart is empty</li>';
+    document.getElementById('cartTotalPrice').innerText = `$${tot}`;
+}
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-pink);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem;"&gt;
+    &lt;div&gt;
+        &lt;h4 style="color: var(--text-primary); margin-bottom: 0.75rem;"&gt;Product Catalog&lt;/h4&gt;
+        &lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem;"&gt;
+            &lt;div style="background: var(--bg-card); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;"&gt;
+                &lt;div style="font-size: 2rem;"&gt;💻&lt;/div&gt;
+                &lt;strong&gt;Pro Laptop&lt;/strong&gt;
+                &lt;p style="color: var(--accent-teal); margin: 0.25rem 0 0.5rem;"&gt;$899&lt;/p&gt;
+                &lt;button class="btn btn-outline btn-sm" onclick="addShopItem('Pro Laptop', 899)"&gt;Add to Cart&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div style="background: var(--bg-card); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;"&gt;
+                &lt;div style="font-size: 2rem;"&gt;🎧&lt;/div&gt;
+                &lt;strong&gt;Headphones&lt;/strong&gt;
+                &lt;p style="color: var(--accent-teal); margin: 0.25rem 0 0.5rem;"&gt;$129&lt;/p&gt;
+                &lt;button class="btn btn-outline btn-sm" onclick="addShopItem('Headphones', 129)"&gt;Add to Cart&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style="background: var(--bg-card); padding: 1.25rem; border-radius: 8px; border: 1px solid var(--border-color);"&gt;
+        &lt;h4 style="color: var(--text-primary); margin-bottom: 0.75rem;"&gt;Cart Summary&lt;/h4&gt;
+        &lt;ul id="cartItemsMini" style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; margin-bottom: 1rem;"&gt;&lt;/ul&gt;
+        &lt;div style="border-top: 1px solid var(--border-color); padding-top: 0.75rem; display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 1rem;"&gt;
+            &lt;span&gt;Total:&lt;/span&gt; &lt;span id="cartTotalPrice" style="color: var(--accent-teal);"&gt;$0&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;button class="btn btn-primary btn-sm" style="width: 100%;" onclick="alert('Checkout completed! Order placed.')"&gt;Checkout&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+let cart = [];
+function addShopItem(name, price) {
+    const exist = cart.find(i =&gt; i.name === name);
+    if(exist) exist.qty++; else cart.push({ name, price, qty: 1 });
+    renderShopCart();
+}
+function renderShopCart() {
+    const ul = document.getElementById('cartItemsMini');
+    let tot = 0;
+    ul.innerHTML = cart.length ? cart.map(i =&gt; {
+        tot += i.price * i.qty;
+        return `&lt;li style="display:flex; justify-content:space-between;"&gt;&lt;span&gt;${i.name} &amp;times; ${i.qty}&lt;/span&gt;&lt;span&gt;$${i.price * i.qty}&lt;/span&gt;&lt;/li&gt;`;
+    }).join('') : '&lt;li style="color:var(--text-muted);"&gt;Cart is empty&lt;/li&gt;';
+    document.getElementById('cartTotalPrice').innerText = `$${tot}`;
+}
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="project-11.html" class="btn btn-outline btn-prev" style="">⬅ Previous Project</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">⚙️ All JS Categories</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-pink);">📋 Mini Projects List</a>
+                </div>
+                <a href="project-13.html" class="btn btn-outline btn-next" style="">Next Project ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Mini Projects Module &bull; Project 12 of 17</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/common.js"></script>
+</body>
+</html>

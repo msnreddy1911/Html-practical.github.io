@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events #03: Demonstrate Form Events (submit, change, focus, blur)</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: var(--accent-pink);">JavaScript Events #03</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html">🏠 Home</a>
+                <a href="../../html/index.html">📄 HTML</a>
+                <a href="../../css/index.html">🎨 CSS</a>
+                <a href="../index.html" class="active">⚙️ JavaScript</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../index.html">JavaScript</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">JavaScript Events</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #03</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="event-02.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 JavaScript Events</a>
+                    <a href="event-04.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-pink);">
+                <span class="experiment-badge" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">EXPERIMENT #03 OF 08</span>
+                <h1 class="experiment-title">Demonstrate Form Events (submit, change, focus, blur)</h1>
+                <p class="experiment-desc">Monitors form lifecycle events with live status alerts.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-pink); box-shadow: 0 0 8px var(--accent-pink);"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">event-03.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 450px; margin: 0 auto;">
+    <div class="form-group">
+        <label class="form-label">Input Event Target</label>
+        <input type="text" class="form-control" placeholder="Focus and type here" onfocus="logFormEvt('Focused input (:focus)')" onblur="logFormEvt('Blurred input (lost focus)')" onchange="logFormEvt('Input value changed: ' + this.value)">
+    </div>
+    <div class="result-box"><div class="result-box-title">Event Trigger Log</div><div id="formEvtLog" class="result-output" style="font-size: 0.9rem;">Interact with field above</div></div>
+</div>
+<script>
+function logFormEvt(msg) { document.getElementById('formEvtLog').innerText = msg; }
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-pink);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 450px; margin: 0 auto;"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label class="form-label"&gt;Input Event Target&lt;/label&gt;
+        &lt;input type="text" class="form-control" placeholder="Focus and type here" onfocus="logFormEvt('Focused input (:focus)')" onblur="logFormEvt('Blurred input (lost focus)')" onchange="logFormEvt('Input value changed: ' + this.value)"&gt;
+    &lt;/div&gt;
+    &lt;div class="result-box"&gt;&lt;div class="result-box-title"&gt;Event Trigger Log&lt;/div&gt;&lt;div id="formEvtLog" class="result-output" style="font-size: 0.9rem;"&gt;Interact with field above&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function logFormEvt(msg) { document.getElementById('formEvtLog').innerText = msg; }
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="event-02.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">⚙️ All JS Categories</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-pink);">📋 Category List</a>
+                </div>
+                <a href="event-04.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">JavaScript Events Module &bull; Program 3 of 8</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/common.js"></script>
+</body>
+</html>

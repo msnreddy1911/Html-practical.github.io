@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project #07: Interactive Quiz Application</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-primary));">Mini Project #07</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html">🏠 Home</a>
+                <a href="../../html/index.html">📄 HTML</a>
+                <a href="../../css/index.html">🎨 CSS</a>
+                <a href="../index.html" class="active">⚙️ JavaScript</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../index.html">JavaScript</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">Mini Projects</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Project #07</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="project-06.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 Mini Projects</a>
+                    <a href="project-08.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-pink);">
+                <span class="experiment-badge" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">MINI PROJECT #07 OF 17</span>
+                <h1 class="experiment-title">Interactive Quiz Application</h1>
+                <p class="experiment-desc">Multi-stage trivia quiz with questions, score tally, instant feedback, and final summary.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-pink); box-shadow: 0 0 8px var(--accent-pink);"></span> Working Application Showcase</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">project-07.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div id="quizAppCard" style="max-width: 480px; margin: 0 auto; background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
+    <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+        <span id="quizProgress">Question 1 of 3</span>
+        <span id="quizLiveScore">Score: 0</span>
+    </div>
+    <h3 id="quizQuestionText" style="color: var(--text-primary); margin-bottom: 1.25rem;">Which CSS layout model provides two-dimensional grid capabilities?</h3>
+    <div id="quizOptionsContainer" style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem;"></div>
+    <div id="quizFeedbackBox" style="min-height: 24px; font-weight: bold; margin-bottom: 1rem; text-align: center;"></div>
+    <button id="quizNextBtn" class="btn btn-primary" style="width: 100%; display: none;" onclick="nextQuizStep()">Next Question →</button>
+</div>
+<script>
+const quizQuestions = [
+    { q: "Which CSS layout model provides two-dimensional row and column grids?", opts: ["Flexbox", "CSS Grid", "Float Layout", "Table Layout"], ans: 1 },
+    { q: "Which HTML5 element represents self-contained content like a blog post?", opts: ["<section>", "<div>", "<article>", "<aside>"], ans: 2 },
+    { q: "Which operator checks for both value and type equality in JavaScript?", opts: ["==", "=", "===", "!="], ans: 2 }
+];
+let qIdx = 0, qScore = 0;
+function renderQuizQ() {
+    const q = quizQuestions[qIdx];
+    document.getElementById('quizProgress').innerText = `Question ${qIdx + 1} of ${quizQuestions.length}`;
+    document.getElementById('quizQuestionText').innerText = q.q;
+    document.getElementById('quizFeedbackBox').innerText = '';
+    document.getElementById('quizNextBtn').style.display = 'none';
+    const optsDiv = document.getElementById('quizOptionsContainer');
+    optsDiv.innerHTML = q.opts.map((opt, i) => `<button class="btn btn-outline" onclick="selectQuizOpt(${i})" style="text-align:left; justify-content:flex-start;">${String.fromCharCode(65 + i)}. ${opt}</button>`).join('');
+}
+function selectQuizOpt(i) {
+    const q = quizQuestions[qIdx];
+    const fb = document.getElementById('quizFeedbackBox');
+    const btns = document.querySelectorAll('#quizOptionsContainer button');
+    btns.forEach(b => b.disabled = true);
+    if(i === q.ans) {
+        qScore++;
+        btns[i].style.background = 'var(--accent-emerald)';
+        btns[i].style.color = '#fff';
+        fb.innerHTML = '<span style="color:var(--accent-emerald);">✓ Correct Answer!</span>';
+    } else {
+        btns[i].style.background = 'var(--accent-rose)';
+        btns[i].style.color = '#fff';
+        btns[q.ans].style.background = 'var(--accent-emerald)';
+        btns[q.ans].style.color = '#fff';
+        fb.innerHTML = '<span style="color:var(--accent-rose);">✗ Incorrect!</span>';
+    }
+    document.getElementById('quizLiveScore').innerText = `Score: ${qScore}`;
+    document.getElementById('quizNextBtn').style.display = 'block';
+}
+function nextQuizStep() {
+    qIdx++;
+    if(qIdx < quizQuestions.length) renderQuizQ();
+    else {
+        document.getElementById('quizAppCard').innerHTML = `
+            <div style="text-align:center; padding:1.5rem 0;">
+                <div style="font-size:3rem; margin-bottom:1rem;">🏆</div>
+                <h2>Quiz Completed!</h2>
+                <p style="color:var(--text-secondary); margin:0.5rem 0 1.5rem;">Your Final Score: <strong style="color:var(--accent-teal); font-size:1.5rem;">${qScore} / ${quizQuestions.length}</strong></p>
+                <button class="btn btn-primary" onclick="location.reload()">Restart Quiz</button>
+            </div>
+        `;
+    }
+}
+renderQuizQ();
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-pink);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div id="quizAppCard" style="max-width: 480px; margin: 0 auto; background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);"&gt;
+    &lt;div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;"&gt;
+        &lt;span id="quizProgress"&gt;Question 1 of 3&lt;/span&gt;
+        &lt;span id="quizLiveScore"&gt;Score: 0&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h3 id="quizQuestionText" style="color: var(--text-primary); margin-bottom: 1.25rem;"&gt;Which CSS layout model provides two-dimensional grid capabilities?&lt;/h3&gt;
+    &lt;div id="quizOptionsContainer" style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem;"&gt;&lt;/div&gt;
+    &lt;div id="quizFeedbackBox" style="min-height: 24px; font-weight: bold; margin-bottom: 1rem; text-align: center;"&gt;&lt;/div&gt;
+    &lt;button id="quizNextBtn" class="btn btn-primary" style="width: 100%; display: none;" onclick="nextQuizStep()"&gt;Next Question →&lt;/button&gt;
+&lt;/div&gt;
+&lt;script&gt;
+const quizQuestions = [
+    { q: "Which CSS layout model provides two-dimensional row and column grids?", opts: ["Flexbox", "CSS Grid", "Float Layout", "Table Layout"], ans: 1 },
+    { q: "Which HTML5 element represents self-contained content like a blog post?", opts: ["&lt;section&gt;", "&lt;div&gt;", "&lt;article&gt;", "&lt;aside&gt;"], ans: 2 },
+    { q: "Which operator checks for both value and type equality in JavaScript?", opts: ["==", "=", "===", "!="], ans: 2 }
+];
+let qIdx = 0, qScore = 0;
+function renderQuizQ() {
+    const q = quizQuestions[qIdx];
+    document.getElementById('quizProgress').innerText = `Question ${qIdx + 1} of ${quizQuestions.length}`;
+    document.getElementById('quizQuestionText').innerText = q.q;
+    document.getElementById('quizFeedbackBox').innerText = '';
+    document.getElementById('quizNextBtn').style.display = 'none';
+    const optsDiv = document.getElementById('quizOptionsContainer');
+    optsDiv.innerHTML = q.opts.map((opt, i) =&gt; `&lt;button class="btn btn-outline" onclick="selectQuizOpt(${i})" style="text-align:left; justify-content:flex-start;"&gt;${String.fromCharCode(65 + i)}. ${opt}&lt;/button&gt;`).join('');
+}
+function selectQuizOpt(i) {
+    const q = quizQuestions[qIdx];
+    const fb = document.getElementById('quizFeedbackBox');
+    const btns = document.querySelectorAll('#quizOptionsContainer button');
+    btns.forEach(b =&gt; b.disabled = true);
+    if(i === q.ans) {
+        qScore++;
+        btns[i].style.background = 'var(--accent-emerald)';
+        btns[i].style.color = '#fff';
+        fb.innerHTML = '&lt;span style="color:var(--accent-emerald);"&gt;✓ Correct Answer!&lt;/span&gt;';
+    } else {
+        btns[i].style.background = 'var(--accent-rose)';
+        btns[i].style.color = '#fff';
+        btns[q.ans].style.background = 'var(--accent-emerald)';
+        btns[q.ans].style.color = '#fff';
+        fb.innerHTML = '&lt;span style="color:var(--accent-rose);"&gt;✗ Incorrect!&lt;/span&gt;';
+    }
+    document.getElementById('quizLiveScore').innerText = `Score: ${qScore}`;
+    document.getElementById('quizNextBtn').style.display = 'block';
+}
+function nextQuizStep() {
+    qIdx++;
+    if(qIdx &lt; quizQuestions.length) renderQuizQ();
+    else {
+        document.getElementById('quizAppCard').innerHTML = `
+            &lt;div style="text-align:center; padding:1.5rem 0;"&gt;
+                &lt;div style="font-size:3rem; margin-bottom:1rem;"&gt;🏆&lt;/div&gt;
+                &lt;h2&gt;Quiz Completed!&lt;/h2&gt;
+                &lt;p style="color:var(--text-secondary); margin:0.5rem 0 1.5rem;"&gt;Your Final Score: &lt;strong style="color:var(--accent-teal); font-size:1.5rem;"&gt;${qScore} / ${quizQuestions.length}&lt;/strong&gt;&lt;/p&gt;
+                &lt;button class="btn btn-primary" onclick="location.reload()"&gt;Restart Quiz&lt;/button&gt;
+            &lt;/div&gt;
+        `;
+    }
+}
+renderQuizQ();
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="project-06.html" class="btn btn-outline btn-prev" style="">⬅ Previous Project</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">⚙️ All JS Categories</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-pink);">📋 Mini Projects List</a>
+                </div>
+                <a href="project-08.html" class="btn btn-outline btn-next" style="">Next Project ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Mini Projects Module &bull; Project 7 of 17</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/common.js"></script>
+</body>
+</html>

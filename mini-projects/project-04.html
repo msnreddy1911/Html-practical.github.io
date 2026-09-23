@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project #04: Countdown Timer</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-primary));">Mini Project #04</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html">🏠 Home</a>
+                <a href="../../html/index.html">📄 HTML</a>
+                <a href="../../css/index.html">🎨 CSS</a>
+                <a href="../index.html" class="active">⚙️ JavaScript</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../index.html">JavaScript</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">Mini Projects</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Project #04</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="project-03.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 Mini Projects</a>
+                    <a href="project-05.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-pink);">
+                <span class="experiment-badge" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">MINI PROJECT #04 OF 17</span>
+                <h1 class="experiment-title">Countdown Timer</h1>
+                <p class="experiment-desc">Custom duration countdown timer with progress ring and alert bell.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-pink); box-shadow: 0 0 8px var(--accent-pink);"></span> Working Application Showcase</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">project-04.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 400px; margin: 0 auto; text-align: center; background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
+    <div style="display: flex; gap: 0.5rem; justify-content: center; align-items: center; margin-bottom: 1.5rem;">
+        <input type="number" id="cdMinutes" class="form-control" value="1" min="0" max="60" style="width: 70px; text-align: center;" placeholder="Min">
+        <span>m</span>
+        <input type="number" id="cdSecs" class="form-control" value="30" min="0" max="59" style="width: 70px; text-align: center;" placeholder="Sec">
+        <span>s</span>
+    </div>
+    <div id="cdDisplayBig" style="font-family: var(--font-mono); font-size: 3rem; font-weight: 800; color: var(--accent-pink); margin-bottom: 1.5rem;">01:30</div>
+    <div style="display: flex; gap: 0.5rem; justify-content: center;">
+        <button id="cdStartBtn" class="btn btn-primary" onclick="toggleCdTimer()">Start Timer</button>
+        <button class="btn btn-outline" onclick="resetCdTimer()">Reset</button>
+    </div>
+</div>
+<script>
+let cdInterval = null, cdTotalSecs = 90, cdCurrentSecs = 90, cdActive = false;
+function formatCd(s) {
+    const m = Math.floor(s / 60).toString().padStart(2, '0');
+    const sec = (s % 60).toString().padStart(2, '0');
+    return `${m}:${sec}`;
+}
+function toggleCdTimer() {
+    const btn = document.getElementById('cdStartBtn');
+    if(!cdActive) {
+        if(cdCurrentSecs <= 0) {
+            const m = parseInt(document.getElementById('cdMinutes').value) || 0;
+            const s = parseInt(document.getElementById('cdSecs').value) || 0;
+            cdTotalSecs = cdCurrentSecs = (m * 60) + s;
+        }
+        if(cdCurrentSecs <= 0) return;
+        cdActive = true; btn.innerText = 'Pause'; btn.className = 'btn btn-danger';
+        cdInterval = setInterval(() => {
+            cdCurrentSecs--;
+            document.getElementById('cdDisplayBig').innerText = formatCd(cdCurrentSecs);
+            if(cdCurrentSecs <= 0) {
+                clearInterval(cdInterval); cdActive = false;
+                btn.innerText = 'Start Timer'; btn.className = 'btn btn-primary';
+                document.getElementById('cdDisplayBig').innerHTML = '<span style="color:var(--accent-emerald);">Finished! 🔔</span>';
+            }
+        }, 1000);
+    } else {
+        cdActive = false; clearInterval(cdInterval); btn.innerText = 'Resume'; btn.className = 'btn btn-primary';
+    }
+}
+function resetCdTimer() {
+    clearInterval(cdInterval); cdActive = false;
+    const m = parseInt(document.getElementById('cdMinutes').value) || 0;
+    const s = parseInt(document.getElementById('cdSecs').value) || 0;
+    cdCurrentSecs = (m * 60) + s;
+    document.getElementById('cdDisplayBig').innerText = formatCd(cdCurrentSecs);
+    const btn = document.getElementById('cdStartBtn'); btn.innerText = 'Start Timer'; btn.className = 'btn btn-primary';
+}
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-pink);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 400px; margin: 0 auto; text-align: center; background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);"&gt;
+    &lt;div style="display: flex; gap: 0.5rem; justify-content: center; align-items: center; margin-bottom: 1.5rem;"&gt;
+        &lt;input type="number" id="cdMinutes" class="form-control" value="1" min="0" max="60" style="width: 70px; text-align: center;" placeholder="Min"&gt;
+        &lt;span&gt;m&lt;/span&gt;
+        &lt;input type="number" id="cdSecs" class="form-control" value="30" min="0" max="59" style="width: 70px; text-align: center;" placeholder="Sec"&gt;
+        &lt;span&gt;s&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div id="cdDisplayBig" style="font-family: var(--font-mono); font-size: 3rem; font-weight: 800; color: var(--accent-pink); margin-bottom: 1.5rem;"&gt;01:30&lt;/div&gt;
+    &lt;div style="display: flex; gap: 0.5rem; justify-content: center;"&gt;
+        &lt;button id="cdStartBtn" class="btn btn-primary" onclick="toggleCdTimer()"&gt;Start Timer&lt;/button&gt;
+        &lt;button class="btn btn-outline" onclick="resetCdTimer()"&gt;Reset&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+let cdInterval = null, cdTotalSecs = 90, cdCurrentSecs = 90, cdActive = false;
+function formatCd(s) {
+    const m = Math.floor(s / 60).toString().padStart(2, '0');
+    const sec = (s % 60).toString().padStart(2, '0');
+    return `${m}:${sec}`;
+}
+function toggleCdTimer() {
+    const btn = document.getElementById('cdStartBtn');
+    if(!cdActive) {
+        if(cdCurrentSecs &lt;= 0) {
+            const m = parseInt(document.getElementById('cdMinutes').value) || 0;
+            const s = parseInt(document.getElementById('cdSecs').value) || 0;
+            cdTotalSecs = cdCurrentSecs = (m * 60) + s;
+        }
+        if(cdCurrentSecs &lt;= 0) return;
+        cdActive = true; btn.innerText = 'Pause'; btn.className = 'btn btn-danger';
+        cdInterval = setInterval(() =&gt; {
+            cdCurrentSecs--;
+            document.getElementById('cdDisplayBig').innerText = formatCd(cdCurrentSecs);
+            if(cdCurrentSecs &lt;= 0) {
+                clearInterval(cdInterval); cdActive = false;
+                btn.innerText = 'Start Timer'; btn.className = 'btn btn-primary';
+                document.getElementById('cdDisplayBig').innerHTML = '&lt;span style="color:var(--accent-emerald);"&gt;Finished! 🔔&lt;/span&gt;';
+            }
+        }, 1000);
+    } else {
+        cdActive = false; clearInterval(cdInterval); btn.innerText = 'Resume'; btn.className = 'btn btn-primary';
+    }
+}
+function resetCdTimer() {
+    clearInterval(cdInterval); cdActive = false;
+    const m = parseInt(document.getElementById('cdMinutes').value) || 0;
+    const s = parseInt(document.getElementById('cdSecs').value) || 0;
+    cdCurrentSecs = (m * 60) + s;
+    document.getElementById('cdDisplayBig').innerText = formatCd(cdCurrentSecs);
+    const btn = document.getElementById('cdStartBtn'); btn.innerText = 'Start Timer'; btn.className = 'btn btn-primary';
+}
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="project-03.html" class="btn btn-outline btn-prev" style="">⬅ Previous Project</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">⚙️ All JS Categories</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-pink);">📋 Mini Projects List</a>
+                </div>
+                <a href="project-05.html" class="btn btn-outline btn-next" style="">Next Project ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Mini Projects Module &bull; Project 4 of 17</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/common.js"></script>
+</body>
+</html>
