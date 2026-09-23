@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events Practical Programs List</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: var(--accent-pink);">JavaScript Events</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="../core-javascript/index.html">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="../mini-projects/index.html">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <span class="page-badge" style="background: rgba(236, 72, 153, 0.12); color: var(--accent-pink); border-color: var(--accent-pink);">PRACTICAL SUITE &bull; 8 PROGRAMS</span>
+                <h1 class="page-title">JavaScript Events</h1>
+                <p class="page-subtitle">Event-driven programming: mouse listeners, keyboard tracker, bubbling vs capturing, event delegation, and HTML5 drag-and-drop.</p>
+            </div>
+
+            <!-- Student Info Banner -->
+            <div class="student-banner">
+                <div class="student-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Student Name</span>
+                        <span class="meta-value">M.Surya Nivas Reddy</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Category</span>
+                        <span class="meta-value">JavaScript Events</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Completed</span>
+                        <span class="meta-value" style="color: var(--accent-pink);">8 / 8 Programs</span>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline btn-sm">🏠 Dashboard</a>
+                </div>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="search-filter-bar">
+                <div class="search-input-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="programSearch" class="search-input" placeholder="Search JavaScript Events programs...">
+                </div>
+                <div class="filter-tags">
+                    <button class="filter-tag active" data-filter="all">All (8)</button>
+                </div>
+            </div>
+
+            <!-- Program Cards Grid -->
+            <div class="program-grid">
+                
+        <a href="event-01.html" class="program-card" data-category="events">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">EVENT #01</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Practical</span>
+            </div>
+            <h3 class="program-title">Demonstrate Mouse Events</h3>
+            <p class="program-desc">Tracks mouseover, mouseout, click, mousedown, mouseup, and mousemove coordinates.</p>
+            <div class="program-footer">
+                <span>Source: event-01.html</span>
+                <span class="program-link-text" style="color: var(--accent-pink);">Launch Demo &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="event-02.html" class="program-card" data-category="events">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">EVENT #02</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Practical</span>
+            </div>
+            <h3 class="program-title">Demonstrate Keyboard Events</h3>
+            <p class="program-desc">Inspects keydown and keyup events displaying key, code, and keyCode values.</p>
+            <div class="program-footer">
+                <span>Source: event-02.html</span>
+                <span class="program-link-text" style="color: var(--accent-pink);">Launch Demo &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="event-03.html" class="program-card" data-category="events">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">EVENT #03</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Practical</span>
+            </div>
+            <h3 class="program-title">Demonstrate Form Events (submit, change, focus, blur)</h3>
+            <p class="program-desc">Monitors form lifecycle events with live status alerts.</p>
+            <div class="program-footer">
+                <span>Source: event-03.html</span>
+                <span class="program-link-text" style="color: var(--accent-pink);">Launch Demo &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="event-04.html" class="program-card" data-category="events">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">EVENT #04</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Practical</span>
+            </div>
+            <h3 class="program-title">Webpage That Responds to Double-Click Events</h3>
+            <p class="program-desc">Listens for ondblclick event to trigger animated heart likes and card expansions.</p>
+            <div class="program-footer">
+                <span>Source: event-04.html</span>
+                <span class="program-link-text" style="color: var(--accent-pink);">Launch Demo &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="event-05.html" class="program-card" data-category="events">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">EVENT #05</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Practical</span>
+            </div>
+            <h3 class="program-title">Event Bubbling and Event Capturing</h3>
+            <p class="program-desc">Visualizes DOM event flow propagation through nested Parent and Child containers.</p>
+            <div class="program-footer">
+                <span>Source: event-05.html</span>
+                <span class="program-link-text" style="color: var(--accent-pink);">Launch Demo &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="event-06.html" class="program-card" data-category="events">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">EVENT #06</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Practical</span>
+            </div>
+            <h3 class="program-title">Demonstrate Event Delegation</h3>
+            <p class="program-desc">Attaches a single click listener on parent <ul> to manage dynamically generated list items.</p>
+            <div class="program-footer">
+                <span>Source: event-06.html</span>
+                <span class="program-link-text" style="color: var(--accent-pink);">Launch Demo &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="event-07.html" class="program-card" data-category="events">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">EVENT #07</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Practical</span>
+            </div>
+            <h3 class="program-title">Keyboard-Controlled Webpage / Game</h3>
+            <p class="program-desc">Controls a player avatar box in a 2D game arena using Arrow Keys (Up, Down, Left, Right).</p>
+            <div class="program-footer">
+                <span>Source: event-07.html</span>
+                <span class="program-link-text" style="color: var(--accent-pink);">Launch Demo &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="event-08.html" class="program-card" data-category="events">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">EVENT #08</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Practical</span>
+            </div>
+            <h3 class="program-title">Drag-and-Drop Application Using JavaScript</h3>
+            <p class="program-desc">Implements native HTML5 Drag and Drop API with draggable cards between Status Columns.</p>
+            <div class="program-footer">
+                <span>Source: event-08.html</span>
+                <span class="program-link-text" style="color: var(--accent-pink);">Launch Demo &rarr;</span>
+            </div>
+        </a>
+        
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">JavaScript Events (8 Programs)</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

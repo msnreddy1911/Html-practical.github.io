@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project #14: Random Password Generator</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-primary));">Mini Project #14</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="../core-javascript/index.html">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="index.html" class="active">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">Mini Projects</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Project #14</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="project-13.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 Mini Projects</a>
+                    <a href="project-15.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-pink);">
+                <span class="experiment-badge" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">MINI PROJECT #14 OF 17</span>
+                <h1 class="experiment-title">Random Password Generator</h1>
+                <p class="experiment-desc">Generates cryptographically secure passwords with custom length slider and character set checkboxes.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-pink); box-shadow: 0 0 8px var(--accent-pink);"></span> Working Application Showcase</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">project-14.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 440px; margin: 0 auto; background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
+    <div style="display: flex; gap: 0.5rem; margin-bottom: 1.25rem;">
+        <input type="text" id="genPwField" readonly class="form-control" style="font-family: var(--font-mono); font-weight: bold; color: var(--accent-teal);" value="Click Generate">
+        <button class="btn btn-outline" onclick="copyGenPw()">Copy</button>
+    </div>
+    <div style="margin-bottom: 1rem;">
+        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.35rem;">
+            <span>Password Length</span>
+            <strong id="pwLenLabel">16</strong>
+        </div>
+        <input type="range" id="pwLenSlider" min="8" max="32" value="16" style="width: 100%;" oninput="document.getElementById('pwLenLabel').innerText = this.value">
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.85rem;">
+        <label><input type="checkbox" id="chkUpper" checked> Uppercase (A-Z)</label>
+        <label><input type="checkbox" id="chkLower" checked> Lowercase (a-z)</label>
+        <label><input type="checkbox" id="chkNumbers" checked> Numbers (0-9)</label>
+        <label><input type="checkbox" id="chkSymbols" checked> Symbols (!@#$)</label>
+    </div>
+    <button class="btn btn-primary" style="width: 100%;" onclick="generatePasswordAction()">Generate Secure Password</button>
+</div>
+<script>
+function generatePasswordAction() {
+    const len = parseInt(document.getElementById('pwLenSlider').value);
+    let chars = '';
+    if(document.getElementById('chkUpper').checked) chars += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    if(document.getElementById('chkLower').checked) chars += 'abcdefghijklmnopqrstuvwxyz';
+    if(document.getElementById('chkNumbers').checked) chars += '0123456789';
+    if(document.getElementById('chkSymbols').checked) chars += '!@#$%^&*()_+-=[]{}|;:,.<>?';
+    if(!chars) chars = 'abcdefghijklmnopqrstuvwxyz';
+    let pw = '';
+    for(let i = 0; i < len; i++) pw += chars.charAt(Math.floor(Math.random() * chars.length));
+    document.getElementById('genPwField').value = pw;
+}
+function copyGenPw() {
+    const f = document.getElementById('genPwField');
+    navigator.clipboard.writeText(f.value);
+    alert('Password copied to clipboard!');
+}
+generatePasswordAction();
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-pink);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 440px; margin: 0 auto; background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);"&gt;
+    &lt;div style="display: flex; gap: 0.5rem; margin-bottom: 1.25rem;"&gt;
+        &lt;input type="text" id="genPwField" readonly class="form-control" style="font-family: var(--font-mono); font-weight: bold; color: var(--accent-teal);" value="Click Generate"&gt;
+        &lt;button class="btn btn-outline" onclick="copyGenPw()"&gt;Copy&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div style="margin-bottom: 1rem;"&gt;
+        &lt;div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.35rem;"&gt;
+            &lt;span&gt;Password Length&lt;/span&gt;
+            &lt;strong id="pwLenLabel"&gt;16&lt;/strong&gt;
+        &lt;/div&gt;
+        &lt;input type="range" id="pwLenSlider" min="8" max="32" value="16" style="width: 100%;" oninput="document.getElementById('pwLenLabel').innerText = this.value"&gt;
+    &lt;/div&gt;
+    &lt;div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.85rem;"&gt;
+        &lt;label&gt;&lt;input type="checkbox" id="chkUpper" checked&gt; Uppercase (A-Z)&lt;/label&gt;
+        &lt;label&gt;&lt;input type="checkbox" id="chkLower" checked&gt; Lowercase (a-z)&lt;/label&gt;
+        &lt;label&gt;&lt;input type="checkbox" id="chkNumbers" checked&gt; Numbers (0-9)&lt;/label&gt;
+        &lt;label&gt;&lt;input type="checkbox" id="chkSymbols" checked&gt; Symbols (!@#$)&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;button class="btn btn-primary" style="width: 100%;" onclick="generatePasswordAction()"&gt;Generate Secure Password&lt;/button&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function generatePasswordAction() {
+    const len = parseInt(document.getElementById('pwLenSlider').value);
+    let chars = '';
+    if(document.getElementById('chkUpper').checked) chars += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    if(document.getElementById('chkLower').checked) chars += 'abcdefghijklmnopqrstuvwxyz';
+    if(document.getElementById('chkNumbers').checked) chars += '0123456789';
+    if(document.getElementById('chkSymbols').checked) chars += '!@#$%^&amp;*()_+-=[]{}|;:,.&lt;&gt;?';
+    if(!chars) chars = 'abcdefghijklmnopqrstuvwxyz';
+    let pw = '';
+    for(let i = 0; i &lt; len; i++) pw += chars.charAt(Math.floor(Math.random() * chars.length));
+    document.getElementById('genPwField').value = pw;
+}
+function copyGenPw() {
+    const f = document.getElementById('genPwField');
+    navigator.clipboard.writeText(f.value);
+    alert('Password copied to clipboard!');
+}
+generatePasswordAction();
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="project-13.html" class="btn btn-outline btn-prev" style="">⬅ Previous Project</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-pink);">📋 Mini Projects List</a>
+                </div>
+                <a href="project-15.html" class="btn btn-outline btn-next" style="">Next Project ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Mini Projects Module &bull; Project 14 of 17</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation #03: Change CSS Styles Using JavaScript</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: var(--accent-teal);">DOM Manipulation #03</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="../core-javascript/index.html">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="../mini-projects/index.html">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">DOM Manipulation</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #03</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="dom-02.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 DOM Manipulation</a>
+                    <a href="dom-04.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #03 OF 15</span>
+                <h1 class="experiment-title">Change CSS Styles Using JavaScript</h1>
+                <p class="experiment-desc">Mutates inline CSS styles dynamically via element.style properties.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">dom-03.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 480px; margin: 0 auto; text-align: center;">
+    <div id="styleBox" style="width: 200px; height: 100px; margin: 0 auto 1.5rem; background: #6366f1; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; transition: all 0.3s ease;">
+        Dynamic Box
+    </div>
+    <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+        <button class="btn btn-outline btn-sm" onclick="const b=document.getElementById('styleBox'); b.style.backgroundColor='#10b981'; b.style.borderRadius='30px';">Green Pill</button>
+        <button class="btn btn-outline btn-sm" onclick="const b=document.getElementById('styleBox'); b.style.backgroundColor='#ec4899'; b.style.transform='rotate(10deg)';">Pink Rotated</button>
+        <button class="btn btn-outline btn-sm" onclick="const b=document.getElementById('styleBox'); b.style.backgroundColor='#6366f1'; b.style.borderRadius='8px'; b.style.transform='none';">Reset</button>
+    </div>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 480px; margin: 0 auto; text-align: center;"&gt;
+    &lt;div id="styleBox" style="width: 200px; height: 100px; margin: 0 auto 1.5rem; background: #6366f1; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; transition: all 0.3s ease;"&gt;
+        Dynamic Box
+    &lt;/div&gt;
+    &lt;div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;"&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="const b=document.getElementById('styleBox'); b.style.backgroundColor='#10b981'; b.style.borderRadius='30px';"&gt;Green Pill&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="const b=document.getElementById('styleBox'); b.style.backgroundColor='#ec4899'; b.style.transform='rotate(10deg)';"&gt;Pink Rotated&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="const b=document.getElementById('styleBox'); b.style.backgroundColor='#6366f1'; b.style.borderRadius='8px'; b.style.transform='none';"&gt;Reset&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="dom-02.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 Category List</a>
+                </div>
+                <a href="dom-04.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">DOM Manipulation Module &bull; Program 3 of 15</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

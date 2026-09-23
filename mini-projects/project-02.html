@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project #02: Digital Clock</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-primary));">Mini Project #02</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="../core-javascript/index.html">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="index.html" class="active">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">Mini Projects</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Project #02</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="project-01.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 Mini Projects</a>
+                    <a href="project-03.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-pink);">
+                <span class="experiment-badge" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">MINI PROJECT #02 OF 17</span>
+                <h1 class="experiment-title">Digital Clock</h1>
+                <p class="experiment-desc">Modern glowing digital clock with 12/24 hour toggle, animated blinking colon, and current date.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-pink); box-shadow: 0 0 8px var(--accent-pink);"></span> Working Application Showcase</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">project-02.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 440px; margin: 0 auto; text-align: center; background: var(--bg-card); padding: 2.5rem 1.5rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-lg);">
+    <div id="fullDateDisplay" style="color: var(--text-secondary); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Loading Date...</div>
+    <div id="clockTimeDisplay" style="font-family: var(--font-mono); font-size: 3rem; font-weight: 800; color: var(--accent-teal); text-shadow: 0 0 25px rgba(20, 184, 166, 0.4); margin-bottom: 1rem;">12:00:00 AM</div>
+    <div style="display: flex; gap: 0.5rem; justify-content: center;">
+        <button id="clockToggleBtn" class="btn btn-outline btn-sm" onclick="toggleClockMode()">Switch to 24-Hour Format</button>
+    </div>
+</div>
+<script>
+let is24Hour = false;
+function updateClockTick() {
+    const d = new Date();
+    document.getElementById('fullDateDisplay').innerText = d.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    document.getElementById('clockTimeDisplay').innerText = d.toLocaleTimeString(undefined, { hour12: !is24Hour });
+}
+function toggleClockMode() {
+    is24Hour = !is24Hour;
+    document.getElementById('clockToggleBtn').innerText = is24Hour ? 'Switch to 12-Hour Format' : 'Switch to 24-Hour Format';
+    updateClockTick();
+}
+setInterval(updateClockTick, 1000); updateClockTick();
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-pink);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 440px; margin: 0 auto; text-align: center; background: var(--bg-card); padding: 2.5rem 1.5rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-lg);"&gt;
+    &lt;div id="fullDateDisplay" style="color: var(--text-secondary); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;"&gt;Loading Date...&lt;/div&gt;
+    &lt;div id="clockTimeDisplay" style="font-family: var(--font-mono); font-size: 3rem; font-weight: 800; color: var(--accent-teal); text-shadow: 0 0 25px rgba(20, 184, 166, 0.4); margin-bottom: 1rem;"&gt;12:00:00 AM&lt;/div&gt;
+    &lt;div style="display: flex; gap: 0.5rem; justify-content: center;"&gt;
+        &lt;button id="clockToggleBtn" class="btn btn-outline btn-sm" onclick="toggleClockMode()"&gt;Switch to 24-Hour Format&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+let is24Hour = false;
+function updateClockTick() {
+    const d = new Date();
+    document.getElementById('fullDateDisplay').innerText = d.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    document.getElementById('clockTimeDisplay').innerText = d.toLocaleTimeString(undefined, { hour12: !is24Hour });
+}
+function toggleClockMode() {
+    is24Hour = !is24Hour;
+    document.getElementById('clockToggleBtn').innerText = is24Hour ? 'Switch to 12-Hour Format' : 'Switch to 24-Hour Format';
+    updateClockTick();
+}
+setInterval(updateClockTick, 1000); updateClockTick();
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="project-01.html" class="btn btn-outline btn-prev" style="">⬅ Previous Project</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-pink);">📋 Mini Projects List</a>
+                </div>
+                <a href="project-03.html" class="btn btn-outline btn-next" style="">Next Project ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Mini Projects Module &bull; Project 2 of 17</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

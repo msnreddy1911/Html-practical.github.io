@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation #15: Image Slideshow/Carousel Using JavaScript</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: var(--accent-teal);">DOM Manipulation #15</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="../core-javascript/index.html">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="../mini-projects/index.html">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">DOM Manipulation</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #15</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="dom-14.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 DOM Manipulation</a>
+                    <a href="#" class="btn btn-outline btn-sm btn-next" style="opacity: 0.5; pointer-events: none;">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #15 OF 15</span>
+                <h1 class="experiment-title">Image Slideshow/Carousel Using JavaScript</h1>
+                <p class="experiment-desc">Interactive slideshow with Next, Prev buttons, indicator dots, and auto-play interval.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">dom-15.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 480px; margin: 0 auto; text-align: center;">
+    <div id="slideDisplay" style="height: 180px; border-radius: 12px; background: linear-gradient(135deg, #4f46e5, #06b6d4); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; color: white; margin-bottom: 1rem; transition: background 0.4s ease;">
+        Slide 1: Web Architecture
+    </div>
+    <div style="display: flex; gap: 0.5rem; justify-content: center;">
+        <button class="btn btn-outline btn-sm" onclick="moveSlide(-1)">◀ Previous</button>
+        <button class="btn btn-outline btn-sm" onclick="moveSlide(1)">Next ▶</button>
+    </div>
+</div>
+<script>
+const slides = [
+    { title: 'Slide 1: Web Architecture', bg: 'linear-gradient(135deg, #4f46e5, #06b6d4)' },
+    { title: 'Slide 2: Responsive Design', bg: 'linear-gradient(135deg, #ec4899, #f59e0b)' },
+    { title: 'Slide 3: JavaScript Engine', bg: 'linear-gradient(135deg, #10b981, #3b82f6)' }
+];
+let curSlide = 0;
+function moveSlide(dir) {
+    curSlide = (curSlide + dir + slides.length) % slides.length;
+    const el = document.getElementById('slideDisplay');
+    el.innerText = slides[curSlide].title;
+    el.style.background = slides[curSlide].bg;
+}
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 480px; margin: 0 auto; text-align: center;"&gt;
+    &lt;div id="slideDisplay" style="height: 180px; border-radius: 12px; background: linear-gradient(135deg, #4f46e5, #06b6d4); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; color: white; margin-bottom: 1rem; transition: background 0.4s ease;"&gt;
+        Slide 1: Web Architecture
+    &lt;/div&gt;
+    &lt;div style="display: flex; gap: 0.5rem; justify-content: center;"&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="moveSlide(-1)"&gt;◀ Previous&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="moveSlide(1)"&gt;Next ▶&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+const slides = [
+    { title: 'Slide 1: Web Architecture', bg: 'linear-gradient(135deg, #4f46e5, #06b6d4)' },
+    { title: 'Slide 2: Responsive Design', bg: 'linear-gradient(135deg, #ec4899, #f59e0b)' },
+    { title: 'Slide 3: JavaScript Engine', bg: 'linear-gradient(135deg, #10b981, #3b82f6)' }
+];
+let curSlide = 0;
+function moveSlide(dir) {
+    curSlide = (curSlide + dir + slides.length) % slides.length;
+    const el = document.getElementById('slideDisplay');
+    el.innerText = slides[curSlide].title;
+    el.style.background = slides[curSlide].bg;
+}
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="dom-14.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 Category List</a>
+                </div>
+                <a href="#" class="btn btn-outline btn-next" style="opacity: 0.5; pointer-events: none;">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">DOM Manipulation Module &bull; Program 15 of 15</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

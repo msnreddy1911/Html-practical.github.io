@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & Validation #07: Display Validation Error Messages Dynamically Without Reloading the Page</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: var(--accent-rose);">Forms & Validation #07</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="../core-javascript/index.html">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="../mini-projects/index.html">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">Forms & Validation</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #07</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="form-06.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 Forms & Validation</a>
+                    <a href="#" class="btn btn-outline btn-sm btn-next" style="opacity: 0.5; pointer-events: none;">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-rose);">
+                <span class="experiment-badge" style="color: var(--accent-rose); background: rgba(244, 63, 94, 0.12);">EXPERIMENT #07 OF 07</span>
+                <h1 class="experiment-title">Display Validation Error Messages Dynamically Without Reloading the Page</h1>
+                <p class="experiment-desc">Provides real-time instant input validation states with error messages without reloading.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-rose); box-shadow: 0 0 8px var(--accent-rose);"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">form-07.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 420px; margin: 0 auto;">
+    <div class="form-group">
+        <label class="form-label">Account Handle (@handle)</label>
+        <input type="text" id="dynHandleInp" class="form-control" placeholder="@username" oninput="validHandleLive(this.value)">
+        <div id="liveHandleMsg" style="font-size: 0.85rem; margin-top: 0.35rem;"></div>
+    </div>
+</div>
+<script>
+function validHandleLive(val) {
+    const m = document.getElementById('liveHandleMsg');
+    if(!val.startsWith('@')) { m.innerHTML = '<span style="color:var(--accent-rose)">Must begin with @ symbol</span>'; }
+    else if(val.length < 5) { m.innerHTML = '<span style="color:var(--accent-amber)">Too short (min 5 chars)</span>'; }
+    else { m.innerHTML = '<span style="color:var(--accent-emerald)">✓ Valid handle format</span>'; }
+}
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-rose);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 420px; margin: 0 auto;"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label class="form-label"&gt;Account Handle (@handle)&lt;/label&gt;
+        &lt;input type="text" id="dynHandleInp" class="form-control" placeholder="@username" oninput="validHandleLive(this.value)"&gt;
+        &lt;div id="liveHandleMsg" style="font-size: 0.85rem; margin-top: 0.35rem;"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function validHandleLive(val) {
+    const m = document.getElementById('liveHandleMsg');
+    if(!val.startsWith('@')) { m.innerHTML = '&lt;span style="color:var(--accent-rose)"&gt;Must begin with @ symbol&lt;/span&gt;'; }
+    else if(val.length &lt; 5) { m.innerHTML = '&lt;span style="color:var(--accent-amber)"&gt;Too short (min 5 chars)&lt;/span&gt;'; }
+    else { m.innerHTML = '&lt;span style="color:var(--accent-emerald)"&gt;✓ Valid handle format&lt;/span&gt;'; }
+}
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="form-06.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-rose);">📋 Category List</a>
+                </div>
+                <a href="#" class="btn btn-outline btn-next" style="opacity: 0.5; pointer-events: none;">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Forms & Validation Module &bull; Program 7 of 7</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation #02: Remove HTML Elements Dynamically</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: var(--accent-teal);">DOM Manipulation #02</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="../core-javascript/index.html">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="../mini-projects/index.html">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">DOM Manipulation</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #02</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="dom-01.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 DOM Manipulation</a>
+                    <a href="dom-03.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #02 OF 15</span>
+                <h1 class="experiment-title">Remove HTML Elements Dynamically</h1>
+                <p class="experiment-desc">Removes targeted child elements from the DOM using element.remove() and removeChild().</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">dom-02.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 480px; margin: 0 auto;">
+    <p style="color: var(--text-secondary); margin-bottom: 0.75rem;">Click the delete button on any item to remove it from the document tree:</p>
+    <div id="removableContainer" style="display: flex; flex-direction: column; gap: 0.5rem;">
+        <div style="background: var(--bg-card); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+            <span>Cluster 1: Primary Gateway</span>
+            <button class="btn btn-danger btn-sm" onclick="this.parentElement.remove()">Remove</button>
+        </div>
+        <div style="background: var(--bg-card); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+            <span>Cluster 2: Database Replicate</span>
+            <button class="btn btn-danger btn-sm" onclick="this.parentElement.remove()">Remove</button>
+        </div>
+        <div style="background: var(--bg-card); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+            <span>Cluster 3: Edge Cache</span>
+            <button class="btn btn-danger btn-sm" onclick="this.parentElement.remove()">Remove</button>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 480px; margin: 0 auto;"&gt;
+    &lt;p style="color: var(--text-secondary); margin-bottom: 0.75rem;"&gt;Click the delete button on any item to remove it from the document tree:&lt;/p&gt;
+    &lt;div id="removableContainer" style="display: flex; flex-direction: column; gap: 0.5rem;"&gt;
+        &lt;div style="background: var(--bg-card); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;"&gt;
+            &lt;span&gt;Cluster 1: Primary Gateway&lt;/span&gt;
+            &lt;button class="btn btn-danger btn-sm" onclick="this.parentElement.remove()"&gt;Remove&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div style="background: var(--bg-card); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;"&gt;
+            &lt;span&gt;Cluster 2: Database Replicate&lt;/span&gt;
+            &lt;button class="btn btn-danger btn-sm" onclick="this.parentElement.remove()"&gt;Remove&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div style="background: var(--bg-card); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;"&gt;
+            &lt;span&gt;Cluster 3: Edge Cache&lt;/span&gt;
+            &lt;button class="btn btn-danger btn-sm" onclick="this.parentElement.remove()"&gt;Remove&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="dom-01.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 Category List</a>
+                </div>
+                <a href="dom-03.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">DOM Manipulation Module &bull; Program 2 of 15</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

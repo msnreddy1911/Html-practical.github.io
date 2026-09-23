@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation #01: Add New Elements Dynamically</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: var(--accent-teal);">DOM Manipulation #01</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="../core-javascript/index.html">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="../mini-projects/index.html">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">DOM Manipulation</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #01</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="#" class="btn btn-outline btn-sm btn-prev" style="opacity: 0.5; pointer-events: none;">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 DOM Manipulation</a>
+                    <a href="dom-02.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #01 OF 15</span>
+                <h1 class="experiment-title">Add New Elements Dynamically</h1>
+                <p class="experiment-desc">Uses document.createElement() and appendChild() to inject cards into the DOM.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">dom-01.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 480px; margin: 0 auto;">
+    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+        <input type="text" id="elemText" class="form-control" placeholder="Item label (e.g. Server Node #4)">
+        <button class="btn btn-primary" onclick="addDynamicElem()">Append Element</button>
+    </div>
+    <div id="dynamicContainer" style="display: flex; flex-direction: column; gap: 0.5rem;">
+        <div style="background: var(--bg-card); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid var(--border-color);">Default Item: Root Node</div>
+    </div>
+</div>
+<script>
+let nodeCount = 1;
+function addDynamicElem() {
+    const txt = document.getElementById('elemText').value.trim() || `Generated Element #${++nodeCount}`;
+    const el = document.createElement('div');
+    el.style.cssText = "background: rgba(20, 184, 166, 0.15); border: 1px solid var(--accent-teal); color: var(--text-primary); padding: 0.75rem 1rem; border-radius: 6px; display: flex; justify-content: space-between; align-items: center;";
+    el.innerHTML = `<span>⚡ ${txt}</span> <small style="color:var(--text-muted); font-size:0.75rem;">Created via createElement()</small>`;
+    document.getElementById('dynamicContainer').appendChild(el);
+    document.getElementById('elemText').value = '';
+}
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 480px; margin: 0 auto;"&gt;
+    &lt;div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;"&gt;
+        &lt;input type="text" id="elemText" class="form-control" placeholder="Item label (e.g. Server Node #4)"&gt;
+        &lt;button class="btn btn-primary" onclick="addDynamicElem()"&gt;Append Element&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div id="dynamicContainer" style="display: flex; flex-direction: column; gap: 0.5rem;"&gt;
+        &lt;div style="background: var(--bg-card); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid var(--border-color);"&gt;Default Item: Root Node&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+let nodeCount = 1;
+function addDynamicElem() {
+    const txt = document.getElementById('elemText').value.trim() || `Generated Element #${++nodeCount}`;
+    const el = document.createElement('div');
+    el.style.cssText = "background: rgba(20, 184, 166, 0.15); border: 1px solid var(--accent-teal); color: var(--text-primary); padding: 0.75rem 1rem; border-radius: 6px; display: flex; justify-content: space-between; align-items: center;";
+    el.innerHTML = `&lt;span&gt;⚡ ${txt}&lt;/span&gt; &lt;small style="color:var(--text-muted); font-size:0.75rem;"&gt;Created via createElement()&lt;/small&gt;`;
+    document.getElementById('dynamicContainer').appendChild(el);
+    document.getElementById('elemText').value = '';
+}
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="#" class="btn btn-outline btn-prev" style="opacity: 0.5; pointer-events: none;">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 Category List</a>
+                </div>
+                <a href="dom-02.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">DOM Manipulation Module &bull; Program 1 of 15</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

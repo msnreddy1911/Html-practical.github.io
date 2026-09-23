@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & Validation #02: Login Form with Username and Password Validation</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: var(--accent-rose);">Forms & Validation #02</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="../core-javascript/index.html">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="../mini-projects/index.html">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">Forms & Validation</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #02</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="form-01.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 Forms & Validation</a>
+                    <a href="form-03.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-rose);">
+                <span class="experiment-badge" style="color: var(--accent-rose); background: rgba(244, 63, 94, 0.12);">EXPERIMENT #02 OF 07</span>
+                <h1 class="experiment-title">Login Form with Username and Password Validation</h1>
+                <p class="experiment-desc">Validates credential length and prevents injection of illegal characters.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-rose); box-shadow: 0 0 8px var(--accent-rose);"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">form-02.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<form onsubmit="validLogin(event)" style="max-width: 400px; margin: 0 auto; background: var(--bg-card); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color);">
+    <div class="form-group"><input type="text" id="lgUser" class="form-control" placeholder="Username (min 4 chars)" required></div>
+    <div class="form-group"><input type="password" id="lgPass" class="form-control" placeholder="Password (min 6 chars)" required></div>
+    <button type="submit" class="btn btn-primary" style="width: 100%;">Authenticate</button>
+</form>
+<script>
+function validLogin(e) {
+    e.preventDefault();
+    const u = document.getElementById('lgUser').value.trim();
+    const p = document.getElementById('lgPass').value;
+    if(u.length < 4 || p.length < 6) alert('Invalid credentials length.');
+    else alert('Login passed validation!');
+}
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-rose);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;form onsubmit="validLogin(event)" style="max-width: 400px; margin: 0 auto; background: var(--bg-card); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color);"&gt;
+    &lt;div class="form-group"&gt;&lt;input type="text" id="lgUser" class="form-control" placeholder="Username (min 4 chars)" required&gt;&lt;/div&gt;
+    &lt;div class="form-group"&gt;&lt;input type="password" id="lgPass" class="form-control" placeholder="Password (min 6 chars)" required&gt;&lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary" style="width: 100%;"&gt;Authenticate&lt;/button&gt;
+&lt;/form&gt;
+&lt;script&gt;
+function validLogin(e) {
+    e.preventDefault();
+    const u = document.getElementById('lgUser').value.trim();
+    const p = document.getElementById('lgPass').value;
+    if(u.length &lt; 4 || p.length &lt; 6) alert('Invalid credentials length.');
+    else alert('Login passed validation!');
+}
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="form-01.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-rose);">📋 Category List</a>
+                </div>
+                <a href="form-03.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Forms & Validation Module &bull; Program 2 of 7</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

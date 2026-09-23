@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation #09: Add and Delete Rows from a Table</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: var(--accent-teal);">DOM Manipulation #09</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="../core-javascript/index.html">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="../mini-projects/index.html">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">DOM Manipulation</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #09</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="dom-08.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 DOM Manipulation</a>
+                    <a href="dom-10.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #09 OF 15</span>
+                <h1 class="experiment-title">Add and Delete Rows from a Table</h1>
+                <p class="experiment-desc">Interactive table with input controls to append new record rows and delete existing entries.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">dom-09.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 550px; margin: 0 auto;">
+    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+        <input type="text" id="newRowName" class="form-control" placeholder="Item name">
+        <input type="number" id="newRowQty" class="form-control" placeholder="Qty" style="width: 100px;">
+        <button class="btn btn-primary btn-sm" onclick="addTableRow()">Add Row</button>
+    </div>
+    <table id="editableTable" style="width: 100%; border-collapse: collapse; background: var(--bg-card); border: 1px solid var(--border-color);">
+        <thead><tr style="background: var(--bg-secondary);"><th style="padding: 0.5rem; border: 1px solid var(--border-color);">Item</th><th style="padding: 0.5rem; border: 1px solid var(--border-color);">Quantity</th><th style="padding: 0.5rem; border: 1px solid var(--border-color);">Action</th></tr></thead>
+        <tbody>
+            <tr><td style="padding: 0.5rem; border: 1px solid var(--border-color);">Monitor 4K</td><td style="padding: 0.5rem; border: 1px solid var(--border-color); text-align: center;">2</td><td style="padding: 0.5rem; border: 1px solid var(--border-color); text-align: center;"><button class="btn btn-danger btn-sm" onclick="this.closest('tr').remove()">Delete</button></td></tr>
+        </tbody>
+    </table>
+</div>
+<script>
+function addTableRow() {
+    const n = document.getElementById('newRowName').value.trim();
+    const q = document.getElementById('newRowQty').value.trim() || '1';
+    if(!n) return;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td style="padding:0.5rem; border:1px solid var(--border-color);">${n}</td><td style="padding:0.5rem; border:1px solid var(--border-color); text-align:center;">${q}</td><td style="padding:0.5rem; border:1px solid var(--border-color); text-align:center;"><button class="btn btn-danger btn-sm" onclick="this.closest('tr').remove()">Delete</button></td>`;
+    document.querySelector('#editableTable tbody').appendChild(tr);
+    document.getElementById('newRowName').value = '';
+}
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 550px; margin: 0 auto;"&gt;
+    &lt;div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;"&gt;
+        &lt;input type="text" id="newRowName" class="form-control" placeholder="Item name"&gt;
+        &lt;input type="number" id="newRowQty" class="form-control" placeholder="Qty" style="width: 100px;"&gt;
+        &lt;button class="btn btn-primary btn-sm" onclick="addTableRow()"&gt;Add Row&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;table id="editableTable" style="width: 100%; border-collapse: collapse; background: var(--bg-card); border: 1px solid var(--border-color);"&gt;
+        &lt;thead&gt;&lt;tr style="background: var(--bg-secondary);"&gt;&lt;th style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;Item&lt;/th&gt;&lt;th style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;Quantity&lt;/th&gt;&lt;th style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;Action&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;&lt;td style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;Monitor 4K&lt;/td&gt;&lt;td style="padding: 0.5rem; border: 1px solid var(--border-color); text-align: center;"&gt;2&lt;/td&gt;&lt;td style="padding: 0.5rem; border: 1px solid var(--border-color); text-align: center;"&gt;&lt;button class="btn btn-danger btn-sm" onclick="this.closest('tr').remove()"&gt;Delete&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function addTableRow() {
+    const n = document.getElementById('newRowName').value.trim();
+    const q = document.getElementById('newRowQty').value.trim() || '1';
+    if(!n) return;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `&lt;td style="padding:0.5rem; border:1px solid var(--border-color);"&gt;${n}&lt;/td&gt;&lt;td style="padding:0.5rem; border:1px solid var(--border-color); text-align:center;"&gt;${q}&lt;/td&gt;&lt;td style="padding:0.5rem; border:1px solid var(--border-color); text-align:center;"&gt;&lt;button class="btn btn-danger btn-sm" onclick="this.closest('tr').remove()"&gt;Delete&lt;/button&gt;&lt;/td&gt;`;
+    document.querySelector('#editableTable tbody').appendChild(tr);
+    document.getElementById('newRowName').value = '';
+}
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="dom-08.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 Category List</a>
+                </div>
+                <a href="dom-10.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">DOM Manipulation Module &bull; Program 9 of 15</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

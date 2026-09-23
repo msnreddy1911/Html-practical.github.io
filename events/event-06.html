@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events #06: Demonstrate Event Delegation</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: var(--accent-pink);">JavaScript Events #06</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="../core-javascript/index.html">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="../mini-projects/index.html">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">JavaScript Events</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #06</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="event-05.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 JavaScript Events</a>
+                    <a href="event-07.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-pink);">
+                <span class="experiment-badge" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">EXPERIMENT #06 OF 08</span>
+                <h1 class="experiment-title">Demonstrate Event Delegation</h1>
+                <p class="experiment-desc">Attaches a single click listener on parent <ul> to manage dynamically generated list items.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-pink); box-shadow: 0 0 8px var(--accent-pink);"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">event-06.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 480px; margin: 0 auto;">
+    <button class="btn btn-outline btn-sm" onclick="addDelegatedItem()" style="margin-bottom: 0.75rem;">+ Add New Item to Delegated List</button>
+    <ul id="delegatedList" style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+        <li data-id="1" style="background: var(--bg-card); padding: 0.6rem 1rem; border-radius: 4px; border: 1px solid var(--border-color); cursor: pointer;">Item #1 (Click to select)</li>
+        <li data-id="2" style="background: var(--bg-card); padding: 0.6rem 1rem; border-radius: 4px; border: 1px solid var(--border-color); cursor: pointer;">Item #2 (Click to select)</li>
+    </ul>
+    <div class="result-box"><div class="result-box-title">Delegated Event Receiver</div><div id="delgOutput" class="result-output" style="font-size: 0.9rem;">Click any item above</div></div>
+</div>
+<script>
+let delgCount = 2;
+document.getElementById('delegatedList').addEventListener('click', (e) => {
+    if(e.target && e.target.nodeName === 'LI') {
+        document.getElementById('delgOutput').innerText = `Delegated click caught for: "${e.target.innerText}"`;
+        e.target.style.borderColor = 'var(--accent-teal)';
+    }
+});
+function addDelegatedItem() {
+    delgCount++;
+    const li = document.createElement('li');
+    li.style.cssText = "background: var(--bg-card); padding: 0.6rem 1rem; border-radius: 4px; border: 1px solid var(--border-color); cursor: pointer;";
+    li.innerText = `Item #${delgCount} (Click to select)`;
+    document.getElementById('delegatedList').appendChild(li);
+}
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-pink);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 480px; margin: 0 auto;"&gt;
+    &lt;button class="btn btn-outline btn-sm" onclick="addDelegatedItem()" style="margin-bottom: 0.75rem;"&gt;+ Add New Item to Delegated List&lt;/button&gt;
+    &lt;ul id="delegatedList" style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;"&gt;
+        &lt;li data-id="1" style="background: var(--bg-card); padding: 0.6rem 1rem; border-radius: 4px; border: 1px solid var(--border-color); cursor: pointer;"&gt;Item #1 (Click to select)&lt;/li&gt;
+        &lt;li data-id="2" style="background: var(--bg-card); padding: 0.6rem 1rem; border-radius: 4px; border: 1px solid var(--border-color); cursor: pointer;"&gt;Item #2 (Click to select)&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="result-box"&gt;&lt;div class="result-box-title"&gt;Delegated Event Receiver&lt;/div&gt;&lt;div id="delgOutput" class="result-output" style="font-size: 0.9rem;"&gt;Click any item above&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+let delgCount = 2;
+document.getElementById('delegatedList').addEventListener('click', (e) =&gt; {
+    if(e.target &amp;&amp; e.target.nodeName === 'LI') {
+        document.getElementById('delgOutput').innerText = `Delegated click caught for: "${e.target.innerText}"`;
+        e.target.style.borderColor = 'var(--accent-teal)';
+    }
+});
+function addDelegatedItem() {
+    delgCount++;
+    const li = document.createElement('li');
+    li.style.cssText = "background: var(--bg-card); padding: 0.6rem 1rem; border-radius: 4px; border: 1px solid var(--border-color); cursor: pointer;";
+    li.innerText = `Item #${delgCount} (Click to select)`;
+    document.getElementById('delegatedList').appendChild(li);
+}
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="event-05.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-pink);">📋 Category List</a>
+                </div>
+                <a href="event-07.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">JavaScript Events Module &bull; Program 6 of 8</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>
