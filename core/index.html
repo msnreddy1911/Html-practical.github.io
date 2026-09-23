@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core JavaScript Practical Programs List (1 to 67)</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-amber), var(--accent-rose));">Core JS</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html">🏠 Home</a>
+                <a href="../../html/index.html">📄 HTML</a>
+                <a href="../../css/index.html">🎨 CSS</a>
+                <a href="../index.html" class="active">⚙️ JavaScript</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <span class="page-badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">JAVASCRIPT SUITE &bull; 67 CORE PROGRAMS</span>
+                <h1 class="page-title">Core JavaScript &amp; Algorithms</h1>
+                <p class="page-subtitle">Interactive algorithmic implementations: functions, arrays, math, prime numbers, strings, sorting, and ES6+ modern architecture.</p>
+            </div>
+
+            <!-- Student Info Banner -->
+            <div class="student-banner">
+                <div class="student-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Student Name</span>
+                        <span class="meta-value">M.Surya Nivas Reddy</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Category</span>
+                        <span class="meta-value">JavaScript Core &amp; Algorithms</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Module Progress</span>
+                        <span class="meta-value" style="color: var(--accent-amber);">67 / 67 Programs Completed</span>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-primary btn-sm">⚙️ JS Categories Hub</a>
+                    <a href="../../index.html" class="btn btn-outline btn-sm">🏠 Home</a>
+                </div>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="search-filter-bar">
+                <div class="search-input-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="programSearch" class="search-input" placeholder="Search 67 Core JS programs by title, algorithm, or function...">
+                </div>
+                <div class="filter-tags">
+                    <button class="filter-tag active" data-filter="all">All (67)</button>
+                </div>
+            </div>
+
+            <!-- Program Cards Grid -->
+            <div class="program-grid">
+                
+        <a href="js-01.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #01</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Display 'Hello World'</h3>
+            <p class="program-desc">Demonstrates displaying text using console.log(), document.write(), alert(), and innerHTML.</p>
+            <div class="program-footer">
+                <span>Source: js-01.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-02.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #02</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Perform Arithmetic Operations</h3>
+            <p class="program-desc">Calculates Addition, Subtraction, Multiplication, Division, Modulus, and Exponentiation on user inputs.</p>
+            <div class="program-footer">
+                <span>Source: js-02.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-03.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #03</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Find the Largest of Three Numbers</h3>
+            <p class="program-desc">Finds the maximum value among three numbers using conditional if-else statements and Math.max().</p>
+            <div class="program-footer">
+                <span>Source: js-03.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-04.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #04</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Check Whether a Number is Even or Odd</h3>
+            <p class="program-desc">Uses modulus operator (n % 2 === 0) to determine parity.</p>
+            <div class="program-footer">
+                <span>Source: js-04.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-05.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #05</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Check Whether a Number is Positive, Negative, or Zero</h3>
+            <p class="program-desc">Evaluates sign of an input number using ternary/if-else logic.</p>
+            <div class="program-footer">
+                <span>Source: js-05.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-06.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #06</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Find the Factorial of a Number</h3>
+            <p class="program-desc">Calculates factorial n! iteratively with step-by-step mathematical expansion.</p>
+            <div class="program-footer">
+                <span>Source: js-06.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-07.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #07</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Generate the Fibonacci Series</h3>
+            <p class="program-desc">Generates the first N terms of the Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, ...</p>
+            <div class="program-footer">
+                <span>Source: js-07.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-08.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #08</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Check Whether a Number is Prime</h3>
+            <p class="program-desc">Checks if a number has exactly two positive divisors using efficient sqrt(n) test.</p>
+            <div class="program-footer">
+                <span>Source: js-08.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-09.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #09</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Check Whether a Number is a Palindrome</h3>
+            <p class="program-desc">Checks if a number reads the same forwards and backwards (e.g. 12321).</p>
+            <div class="program-footer">
+                <span>Source: js-09.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-10.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #10</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Reverse a Number</h3>
+            <p class="program-desc">Extracts digits mathematically using modulus and integer division to reverse an integer.</p>
+            <div class="program-footer">
+                <span>Source: js-10.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-11.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #11</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Find the Sum of Digits of a Number</h3>
+            <p class="program-desc">Computes the arithmetic sum of individual digits in an integer.</p>
+            <div class="program-footer">
+                <span>Source: js-11.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-12.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #12</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Find the Largest and Smallest Element in an Array</h3>
+            <p class="program-desc">Identifies maximum and minimum values in an array of numbers.</p>
+            <div class="program-footer">
+                <span>Source: js-12.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-13.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #13</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Sort an Array</h3>
+            <p class="program-desc">Sorts numeric array in ascending and descending order using Array.prototype.sort().</p>
+            <div class="program-footer">
+                <span>Source: js-13.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-14.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #14</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Find the Sum and Average of Array Elements</h3>
+            <p class="program-desc">Aggregates array elements using reduce() to compute total and arithmetic mean.</p>
+            <div class="program-footer">
+                <span>Source: js-14.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-15.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #15</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Demonstrate JavaScript Functions</h3>
+            <p class="program-desc">Demonstrates function declaration, function expressions, parameter passing, and return values.</p>
+            <div class="program-footer">
+                <span>Source: js-15.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-16.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #16</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Program Using Arrow Functions</h3>
+            <p class="program-desc">Demonstrates ES6 fat arrow syntax () => {}, lexical this, and concise implicit return expressions.</p>
+            <div class="program-footer">
+                <span>Source: js-16.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-17.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #17</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Strings and String Methods</h3>
+            <p class="program-desc">Demonstrates toUpperCase(), slice(), replace(), split(), trim(), and includes().</p>
+            <div class="program-footer">
+                <span>Source: js-17.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-18.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #18</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Arrays and Array Methods</h3>
+            <p class="program-desc">Showcases map(), filter(), reduce(), and push()/pop() array operations.</p>
+            <div class="program-footer">
+                <span>Source: js-18.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-19.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #19</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Objects in JavaScript</h3>
+            <p class="program-desc">Object literals, properties, methods, Object.keys(), Object.values(), and JSON serialization.</p>
+            <div class="program-footer">
+                <span>Source: js-19.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-20.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #20</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Date and Math Objects</h3>
+            <p class="program-desc">Live clock formatted with Date object and common Math functions (random, round, ceil, pow).</p>
+            <div class="program-footer">
+                <span>Source: js-20.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-21.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #21</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">DOM & Event-Based Experiments Showcase</h3>
+            <p class="program-desc">An interactive lab playground consolidating core DOM access methods and event bindings.</p>
+            <div class="program-footer">
+                <span>Source: js-21.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-22.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #22</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Change Text Using JavaScript</h3>
+            <p class="program-desc">Modifying paragraph and heading content dynamically using .textContent and .innerHTML.</p>
+            <div class="program-footer">
+                <span>Source: js-22.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-23.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #23</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Change the Background Color of a Webpage Using JavaScript</h3>
+            <p class="program-desc">Dynamically updates document.body.style.backgroundColor based on user choice.</p>
+            <div class="program-footer">
+                <span>Source: js-23.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-24.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #24</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Button Click Event Using JavaScript</h3>
+            <p class="program-desc">Attaches addEventListener('click', fn) to count clicks and display visual feedback.</p>
+            <div class="program-footer">
+                <span>Source: js-24.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-25.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #25</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Show / Hide an HTML Element</h3>
+            <p class="program-desc">Toggles CSS display between 'none' and 'block' upon button trigger.</p>
+            <div class="program-footer">
+                <span>Source: js-25.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-26.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #26</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Change an Image When a Button is Clicked</h3>
+            <p class="program-desc">Swaps the src attribute of an image element with smooth transition.</p>
+            <div class="program-footer">
+                <span>Source: js-26.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-27.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #27</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Create a Digital Clock Using JavaScript</h3>
+            <p class="program-desc">Real-time ticking digital clock displaying Hours:Minutes:Seconds and AM/PM.</p>
+            <div class="program-footer">
+                <span>Source: js-27.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-28.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #28</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Simple Calculator Using HTML, CSS, and JavaScript</h3>
+            <p class="program-desc">Interactive calculator keypad with evaluation and clear buttons.</p>
+            <div class="program-footer">
+                <span>Source: js-28.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-29.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #29</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Number Guessing Game</h3>
+            <p class="program-desc">Random number generator with Too High / Too Low hints and attempt tracker.</p>
+            <div class="program-footer">
+                <span>Source: js-29.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-30.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #30</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Form Validation Program</h3>
+            <p class="program-desc">Validates required fields, checks for empty values, and highlights fields with errors.</p>
+            <div class="program-footer">
+                <span>Source: js-30.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-31.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #31</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Validate Name, Email, Phone Number, and Password Using JavaScript</h3>
+            <p class="program-desc">Comprehensive validation ensuring valid name format, email regex, 10-digit phone, and strong password.</p>
+            <div class="program-footer">
+                <span>Source: js-31.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-32.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #32</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Create a To-Do List Using JavaScript</h3>
+            <p class="program-desc">Add tasks, toggle completed state, and delete items from an active task list.</p>
+            <div class="program-footer">
+                <span>Source: js-32.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-33.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #33</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Create a Simple Quiz Application</h3>
+            <p class="program-desc">Multiple choice questionnaire that calculates score and shows instant feedback.</p>
+            <div class="program-footer">
+                <span>Source: js-33.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-34.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #34</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Counter Application with Increment and Decrement Buttons</h3>
+            <p class="program-desc">Dynamic counter widget with +, -, Reset, and step increment controls.</p>
+            <div class="program-footer">
+                <span>Source: js-34.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-35.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #35</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Create a Stopwatch Using JavaScript</h3>
+            <p class="program-desc">Millisecond stopwatch with Start, Pause, and Reset controls using performance.now() / setInterval.</p>
+            <div class="program-footer">
+                <span>Source: js-35.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-36.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #36</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Create a Countdown Timer Using JavaScript</h3>
+            <p class="program-desc">Custom duration countdown timer with audible alert simulation upon completion.</p>
+            <div class="program-footer">
+                <span>Source: js-36.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-37.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #37</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Advanced JavaScript Lab Showcase</h3>
+            <p class="program-desc">Overview of modern ES6+, asynchronous patterns, and JavaScript architecture.</p>
+            <div class="program-footer">
+                <span>Source: js-37.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-38.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #38</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Demonstrate ES6 let, const, Template Literals, and Destructuring</h3>
+            <p class="program-desc">Block scoping with let/const, template interpolation `${expr}`, and object/array destructuring.</p>
+            <div class="program-footer">
+                <span>Source: js-38.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-39.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #39</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Demonstrate Spread and Rest Operators</h3>
+            <p class="program-desc">Array/object cloning using spread (...arr) and variadic parameters with rest (...args).</p>
+            <div class="program-footer">
+                <span>Source: js-39.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-40.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #40</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Demonstrate Classes and Objects</h3>
+            <p class="program-desc">ES6 class definitions with constructor, instance methods, and getter/setter encapsulation.</p>
+            <div class="program-footer">
+                <span>Source: js-40.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-41.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #41</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Demonstrate Inheritance in JavaScript</h3>
+            <p class="program-desc">Class inheritance using extends, super() constructor calls, and method overriding.</p>
+            <div class="program-footer">
+                <span>Source: js-41.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-42.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #42</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Demonstrate Callbacks, Promises, and Async/Await</h3>
+            <p class="program-desc">Asynchronous progression: callback pattern -> Promise chains -> async/await syntax.</p>
+            <div class="program-footer">
+                <span>Source: js-42.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-43.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #43</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Fetch Data From an API Using Fetch API</h3>
+            <p class="program-desc">Fetches live JSON data using window.fetch() with .then() and error catching.</p>
+            <div class="program-footer">
+                <span>Source: js-43.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-44.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #44</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Display API Data Dynamically on a Webpage</h3>
+            <p class="program-desc">Renders fetched API array into dynamically created HTML cards/elements.</p>
+            <div class="program-footer">
+                <span>Source: js-44.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-45.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #45</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Store and Retrieve Data Using localStorage</h3>
+            <p class="program-desc">Demonstrates setItem, getItem, and removeItem across browser sessions.</p>
+            <div class="program-footer">
+                <span>Source: js-45.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-46.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #46</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Responsive Login Form with JavaScript Validation</h3>
+            <p class="program-desc">Validates password length, email format, and provides interactive status feedback.</p>
+            <div class="program-footer">
+                <span>Source: js-46.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-47.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #47</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Complete Interactive Webpage Using HTML, CSS, and JavaScript</h3>
+            <p class="program-desc">Integrates interactive DOM manipulation, responsive styling, and dynamic calculation.</p>
+            <div class="program-footer">
+                <span>Source: js-47.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-48.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #48</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Swap Two Numbers</h3>
+            <p class="program-desc">Swaps two numbers with temporary variable, arithmetic trick, and ES6 destructuring [a, b] = [b, a].</p>
+            <div class="program-footer">
+                <span>Source: js-48.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-49.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #49</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Find the Greatest Common Divisor (GCD) of Two Numbers</h3>
+            <p class="program-desc">Implements Euclidean Algorithm to find the HCF/GCD of two integers.</p>
+            <div class="program-footer">
+                <span>Source: js-49.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-50.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #50</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Find the Least Common Multiple (LCM) of Two Numbers</h3>
+            <p class="program-desc">Calculates LCM using formula: LCM(a, b) = (|a * b|) / GCD(a, b).</p>
+            <div class="program-footer">
+                <span>Source: js-50.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-51.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #51</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Check Whether a Number is an Armstrong Number</h3>
+            <p class="program-desc">Checks if sum of digits raised to the power of number of digits equals the number (e.g. 153).</p>
+            <div class="program-footer">
+                <span>Source: js-51.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-52.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #52</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Check Whether a Number is a Perfect Number</h3>
+            <p class="program-desc">Checks if sum of proper divisors equals the number (e.g. 6, 28, 496).</p>
+            <div class="program-footer">
+                <span>Source: js-52.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-53.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #53</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Generate the Multiplication Table of a Given Number</h3>
+            <p class="program-desc">Outputs multiplication table from 1 to 10 in a formatted list.</p>
+            <div class="program-footer">
+                <span>Source: js-53.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-54.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #54</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Calculate the Power of a Number</h3>
+            <p class="program-desc">Calculates base raised to exponent (x^y) with iterative and recursive steps.</p>
+            <div class="program-footer">
+                <span>Source: js-54.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-55.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #55</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Count the Number of Digits in a Number</h3>
+            <p class="program-desc">Counts total digits in an integer using Math.floor(Math.log10(n)) + 1.</p>
+            <div class="program-footer">
+                <span>Source: js-55.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-56.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #56</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Find the Second-Largest Element in an Array</h3>
+            <p class="program-desc">Finds second maximum value in an array without full sorting.</p>
+            <div class="program-footer">
+                <span>Source: js-56.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-57.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #57</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Remove Duplicate Elements from an Array</h3>
+            <p class="program-desc">Filters array to unique items using Array.from(new Set(arr)).</p>
+            <div class="program-footer">
+                <span>Source: js-57.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-58.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #58</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Merge Two Arrays</h3>
+            <p class="program-desc">Merges two arrays using concat() and spread operator (...a, ...b).</p>
+            <div class="program-footer">
+                <span>Source: js-58.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-59.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #59</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Find the Frequency of Each Element in an Array</h3>
+            <p class="program-desc">Counts frequency occurrences using hash maps / objects.</p>
+            <div class="program-footer">
+                <span>Source: js-59.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-60.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #60</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Find Common Elements in Two Arrays</h3>
+            <p class="program-desc">Finds array intersection using filter() and includes().</p>
+            <div class="program-footer">
+                <span>Source: js-60.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-61.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #61</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Reverse a String</h3>
+            <p class="program-desc">Reverses a string using split(''), reverse(), and join('').</p>
+            <div class="program-footer">
+                <span>Source: js-61.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-62.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #62</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Check Whether a String is a Palindrome</h3>
+            <p class="program-desc">Checks if a string reads identically forwards and backwards (case-insensitive).</p>
+            <div class="program-footer">
+                <span>Source: js-62.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-63.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #63</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Count Vowels and Consonants in a String</h3>
+            <p class="program-desc">Analyzes letter distribution to count vowels (a, e, i, o, u) and consonants.</p>
+            <div class="program-footer">
+                <span>Source: js-63.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-64.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #64</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Count the Number of Words in a String</h3>
+            <p class="program-desc">Splits string by whitespace boundaries (\s+) to count words accurately.</p>
+            <div class="program-footer">
+                <span>Source: js-64.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-65.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #65</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Find the Frequency of Characters in a String</h3>
+            <p class="program-desc">Computes the character occurrence frequency map across a text string.</p>
+            <div class="program-footer">
+                <span>Source: js-65.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-66.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #66</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Demonstrate Regular Expressions in JavaScript</h3>
+            <p class="program-desc">Regex matching using RegExp.test(), exec(), string.match(), and character classes.</p>
+            <div class="program-footer">
+                <span>Source: js-66.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="js-67.html" class="program-card" data-category="core-js">
+            <div class="program-header">
+                <span class="program-number" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">JS #67</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Algorithm</span>
+            </div>
+            <h3 class="program-title">Validate an Email Address Using a Regular Expression</h3>
+            <p class="program-desc">Validates RFC 5322 compliant email structure using strict regular expressions.</p>
+            <div class="program-footer">
+                <span>Source: js-67.html</span>
+                <span class="program-link-text" style="color: var(--accent-amber);">Run Code &rarr;</span>
+            </div>
+        </a>
+        
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Total 122 JavaScript Programs &bull; Core Module (67 Programs)</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/common.js"></script>
+</body>
+</html>

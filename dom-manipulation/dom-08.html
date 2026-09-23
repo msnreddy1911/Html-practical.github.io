@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation #08: Create a Dynamic Table Using JavaScript</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: var(--accent-teal);">DOM Manipulation #08</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html">🏠 Home</a>
+                <a href="../../html/index.html">📄 HTML</a>
+                <a href="../../css/index.html">🎨 CSS</a>
+                <a href="../index.html" class="active">⚙️ JavaScript</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../index.html">JavaScript</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">DOM Manipulation</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #08</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="dom-07.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 DOM Manipulation</a>
+                    <a href="dom-09.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #08 OF 15</span>
+                <h1 class="experiment-title">Create a Dynamic Table Using JavaScript</h1>
+                <p class="experiment-desc">Generates complete HTML tables programmatically with header rows and data cells.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">dom-08.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 520px; margin: 0 auto;">
+    <button class="btn btn-primary btn-sm" onclick="buildDynamicTable()" style="margin-bottom: 1rem;">Generate Table from Data</button>
+    <div id="dynTablePlaceholder" style="overflow-x: auto;">Click button to generate dynamic table.</div>
+</div>
+<script>
+function buildDynamicTable() {
+    const data = [
+        { id: 101, title: 'HTML5 Semantic Spec', status: 'Passed' },
+        { id: 102, title: 'CSS3 Grid Layout', status: 'Passed' },
+        { id: 103, title: 'JavaScript Engine V8', status: 'Active' }
+    ];
+    let html = `<table style="width:100%; border-collapse:collapse; background:var(--bg-card); border-radius:6px; overflow:hidden;">
+        <tr style="background:rgba(99,102,241,0.2);"><th style="padding:8px; border:1px solid var(--border-color);">ID</th><th style="padding:8px; border:1px solid var(--border-color);">Module</th><th style="padding:8px; border:1px solid var(--border-color);">Status</th></tr>`;
+    data.forEach(r => {
+        html += `<tr><td style="padding:8px; border:1px solid var(--border-color); text-align:center;">${r.id}</td><td style="padding:8px; border:1px solid var(--border-color);">${r.title}</td><td style="padding:8px; border:1px solid var(--border-color); color:var(--accent-teal);">${r.status}</td></tr>`;
+    });
+    html += '</table>';
+    document.getElementById('dynTablePlaceholder').innerHTML = html;
+}
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 520px; margin: 0 auto;"&gt;
+    &lt;button class="btn btn-primary btn-sm" onclick="buildDynamicTable()" style="margin-bottom: 1rem;"&gt;Generate Table from Data&lt;/button&gt;
+    &lt;div id="dynTablePlaceholder" style="overflow-x: auto;"&gt;Click button to generate dynamic table.&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function buildDynamicTable() {
+    const data = [
+        { id: 101, title: 'HTML5 Semantic Spec', status: 'Passed' },
+        { id: 102, title: 'CSS3 Grid Layout', status: 'Passed' },
+        { id: 103, title: 'JavaScript Engine V8', status: 'Active' }
+    ];
+    let html = `&lt;table style="width:100%; border-collapse:collapse; background:var(--bg-card); border-radius:6px; overflow:hidden;"&gt;
+        &lt;tr style="background:rgba(99,102,241,0.2);"&gt;&lt;th style="padding:8px; border:1px solid var(--border-color);"&gt;ID&lt;/th&gt;&lt;th style="padding:8px; border:1px solid var(--border-color);"&gt;Module&lt;/th&gt;&lt;th style="padding:8px; border:1px solid var(--border-color);"&gt;Status&lt;/th&gt;&lt;/tr&gt;`;
+    data.forEach(r =&gt; {
+        html += `&lt;tr&gt;&lt;td style="padding:8px; border:1px solid var(--border-color); text-align:center;"&gt;${r.id}&lt;/td&gt;&lt;td style="padding:8px; border:1px solid var(--border-color);"&gt;${r.title}&lt;/td&gt;&lt;td style="padding:8px; border:1px solid var(--border-color); color:var(--accent-teal);"&gt;${r.status}&lt;/td&gt;&lt;/tr&gt;`;
+    });
+    html += '&lt;/table&gt;';
+    document.getElementById('dynTablePlaceholder').innerHTML = html;
+}
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="dom-07.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">⚙️ All JS Categories</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 Category List</a>
+                </div>
+                <a href="dom-09.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">DOM Manipulation Module &bull; Program 8 of 15</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/common.js"></script>
+</body>
+</html>

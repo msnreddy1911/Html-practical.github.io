@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Program #03: Find the Largest of Three Numbers</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-amber), var(--accent-rose));">JS #03</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html">🏠 Home</a>
+                <a href="../../html/index.html">📄 HTML</a>
+                <a href="../../css/index.html">🎨 CSS</a>
+                <a href="../index.html" class="active">⚙️ JavaScript</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../index.html">JavaScript</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">Core JS</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #03</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="js-02.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 Core List</a>
+                    <a href="js-04.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-amber);">
+                <span class="experiment-badge" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">CORE JS EXPERIMENT #03 OF 67</span>
+                <h1 class="experiment-title">Find the Largest of Three Numbers</h1>
+                <p class="experiment-desc">Finds the maximum value among three numbers using conditional if-else statements and Math.max().</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-amber); box-shadow: 0 0 8px var(--accent-amber);"></span> Interactive JavaScript Demo</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">js-03.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 480px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; margin-bottom: 1rem;">
+        <input type="number" id="lgN1" class="form-control" value="45" placeholder="Num 1">
+        <input type="number" id="lgN2" class="form-control" value="89" placeholder="Num 2">
+        <input type="number" id="lgN3" class="form-control" value="32" placeholder="Num 3">
+    </div>
+    <button class="btn btn-primary" style="width: 100%;" onclick="findLargest3()">Find Largest Number</button>
+    <div class="result-box"><div class="result-box-title">Largest Number Found</div><div id="lgRes" class="result-output">Click button to compute</div></div>
+</div>
+<script>
+function findLargest3() {
+    const a = parseFloat(document.getElementById('lgN1').value) || 0;
+    const b = parseFloat(document.getElementById('lgN2').value) || 0;
+    const c = parseFloat(document.getElementById('lgN3').value) || 0;
+    const max = Math.max(a, b, c);
+    document.getElementById('lgRes').innerHTML = `Maximum among (${a}, ${b}, ${c}) is <span style="color:var(--accent-teal);">${max}</span>`;
+}
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-amber);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 480px; margin: 0 auto;"&gt;
+    &lt;div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; margin-bottom: 1rem;"&gt;
+        &lt;input type="number" id="lgN1" class="form-control" value="45" placeholder="Num 1"&gt;
+        &lt;input type="number" id="lgN2" class="form-control" value="89" placeholder="Num 2"&gt;
+        &lt;input type="number" id="lgN3" class="form-control" value="32" placeholder="Num 3"&gt;
+    &lt;/div&gt;
+    &lt;button class="btn btn-primary" style="width: 100%;" onclick="findLargest3()"&gt;Find Largest Number&lt;/button&gt;
+    &lt;div class="result-box"&gt;&lt;div class="result-box-title"&gt;Largest Number Found&lt;/div&gt;&lt;div id="lgRes" class="result-output"&gt;Click button to compute&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function findLargest3() {
+    const a = parseFloat(document.getElementById('lgN1').value) || 0;
+    const b = parseFloat(document.getElementById('lgN2').value) || 0;
+    const c = parseFloat(document.getElementById('lgN3').value) || 0;
+    const max = Math.max(a, b, c);
+    document.getElementById('lgRes').innerHTML = `Maximum among (${a}, ${b}, ${c}) is &lt;span style="color:var(--accent-teal);"&gt;${max}&lt;/span&gt;`;
+}
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="js-02.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">⚙️ All JS Categories</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-amber);">📋 Core JS List</a>
+                </div>
+                <a href="js-04.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">JavaScript Core Module &bull; Program 3 of 67 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/common.js"></script>
+</body>
+</html>

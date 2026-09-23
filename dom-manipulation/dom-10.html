@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation #10: Search and Filter Table Records</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: var(--accent-teal);">DOM Manipulation #10</span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html">🏠 Home</a>
+                <a href="../../html/index.html">📄 HTML</a>
+                <a href="../../css/index.html">🎨 CSS</a>
+                <a href="../index.html" class="active">⚙️ JavaScript</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="../index.html">JavaScript</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">DOM Manipulation</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #10</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="dom-09.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 DOM Manipulation</a>
+                    <a href="dom-11.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #10 OF 15</span>
+                <h1 class="experiment-title">Search and Filter Table Records</h1>
+                <p class="experiment-desc">Live client-side text filter matching table rows in real time as the user types.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">dom-10.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 520px; margin: 0 auto;">
+    <input type="text" id="tableFilterInput" class="form-control" placeholder="Search table records (e.g. London, Designer)..." style="margin-bottom: 1rem;" oninput="filterTableRows()">
+    <table id="searchableTable" style="width: 100%; border-collapse: collapse; background: var(--bg-card); border: 1px solid var(--border-color); font-size: 0.9rem;">
+        <thead><tr style="background: rgba(99,102,241,0.2);"><th style="padding: 0.6rem; border: 1px solid var(--border-color);">Employee</th><th style="padding: 0.6rem; border: 1px solid var(--border-color);">Role</th><th style="padding: 0.6rem; border: 1px solid var(--border-color);">Location</th></tr></thead>
+        <tbody>
+            <tr><td style="padding: 0.5rem; border: 1px solid var(--border-color);">Alex Turner</td><td style="padding: 0.5rem; border: 1px solid var(--border-color);">Software Engineer</td><td style="padding: 0.5rem; border: 1px solid var(--border-color);">London</td></tr>
+            <tr><td style="padding: 0.5rem; border: 1px solid var(--border-color);">Elena Rostova</td><td style="padding: 0.5rem; border: 1px solid var(--border-color);">Product Designer</td><td style="padding: 0.5rem; border: 1px solid var(--border-color);">Berlin</td></tr>
+            <tr><td style="padding: 0.5rem; border: 1px solid var(--border-color);">David Chen</td><td style="padding: 0.5rem; border: 1px solid var(--border-color);">Database Architect</td><td style="padding: 0.5rem; border: 1px solid var(--border-color);">Singapore</td></tr>
+            <tr><td style="padding: 0.5rem; border: 1px solid var(--border-color);">Sarah Connor</td><td style="padding: 0.5rem; border: 1px solid var(--border-color);">Security Lead</td><td style="padding: 0.5rem; border: 1px solid var(--border-color);">Austin</td></tr>
+        </tbody>
+    </table>
+</div>
+<script>
+function filterTableRows() {
+    const q = document.getElementById('tableFilterInput').value.toLowerCase();
+    document.querySelectorAll('#searchableTable tbody tr').forEach(tr => {
+        tr.style.display = tr.innerText.toLowerCase().includes(q) ? '' : 'none';
+    });
+}
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 520px; margin: 0 auto;"&gt;
+    &lt;input type="text" id="tableFilterInput" class="form-control" placeholder="Search table records (e.g. London, Designer)..." style="margin-bottom: 1rem;" oninput="filterTableRows()"&gt;
+    &lt;table id="searchableTable" style="width: 100%; border-collapse: collapse; background: var(--bg-card); border: 1px solid var(--border-color); font-size: 0.9rem;"&gt;
+        &lt;thead&gt;&lt;tr style="background: rgba(99,102,241,0.2);"&gt;&lt;th style="padding: 0.6rem; border: 1px solid var(--border-color);"&gt;Employee&lt;/th&gt;&lt;th style="padding: 0.6rem; border: 1px solid var(--border-color);"&gt;Role&lt;/th&gt;&lt;th style="padding: 0.6rem; border: 1px solid var(--border-color);"&gt;Location&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;&lt;td style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;Alex Turner&lt;/td&gt;&lt;td style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;Software Engineer&lt;/td&gt;&lt;td style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;London&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;Elena Rostova&lt;/td&gt;&lt;td style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;Product Designer&lt;/td&gt;&lt;td style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;Berlin&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;David Chen&lt;/td&gt;&lt;td style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;Database Architect&lt;/td&gt;&lt;td style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;Singapore&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;Sarah Connor&lt;/td&gt;&lt;td style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;Security Lead&lt;/td&gt;&lt;td style="padding: 0.5rem; border: 1px solid var(--border-color);"&gt;Austin&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function filterTableRows() {
+    const q = document.getElementById('tableFilterInput').value.toLowerCase();
+    document.querySelectorAll('#searchableTable tbody tr').forEach(tr =&gt; {
+        tr.style.display = tr.innerText.toLowerCase().includes(q) ? '' : 'none';
+    });
+}
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="dom-09.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">⚙️ All JS Categories</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 Category List</a>
+                </div>
+                <a href="dom-11.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">DOM Manipulation Module &bull; Program 10 of 15</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/common.js"></script>
+</body>
+</html>
