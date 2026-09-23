@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Program #51: Check Whether a Number is an Armstrong Number</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-amber), var(--accent-rose));">Core JS #51</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="index.html" class="active">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="../mini-projects/index.html">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">Core JavaScript</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #51</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="js-50.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 Core List</a>
+                    <a href="js-52.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-amber);">
+                <span class="experiment-badge" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">CORE JS EXPERIMENT #51 OF 67</span>
+                <h1 class="experiment-title">Check Whether a Number is an Armstrong Number</h1>
+                <p class="experiment-desc">Checks if sum of digits raised to the power of number of digits equals the number (e.g. 153).</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-amber); box-shadow: 0 0 8px var(--accent-amber);"></span> Interactive JavaScript Demo</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">js-51.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 450px; margin: 0 auto; text-align: center;">
+    <input type="number" id="armInp" class="form-control" value="153" style="margin-bottom: 1rem;">
+    <button class="btn btn-primary" onclick="checkArmstrong()">Check Armstrong</button>
+    <div class="result-box"><div class="result-box-title">Armstrong Evaluation</div><div id="armRes" class="result-output">153 is an Armstrong number!</div></div>
+</div>
+<script>
+function checkArmstrong() {
+    const s = document.getElementById('armInp').value.trim();
+    const num = parseInt(s);
+    const p = s.length;
+    const sum = s.split('').reduce((acc, d) => acc + Math.pow(parseInt(d), p), 0);
+    const isArm = sum === num;
+    document.getElementById('armRes').innerHTML = `${num} ${isArm ? '<span style="color:var(--accent-emerald)">IS an Armstrong number!</span>' : '<span style="color:var(--accent-rose)">NOT an Armstrong number</span>'}`;
+}
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-amber);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 450px; margin: 0 auto; text-align: center;"&gt;
+    &lt;input type="number" id="armInp" class="form-control" value="153" style="margin-bottom: 1rem;"&gt;
+    &lt;button class="btn btn-primary" onclick="checkArmstrong()"&gt;Check Armstrong&lt;/button&gt;
+    &lt;div class="result-box"&gt;&lt;div class="result-box-title"&gt;Armstrong Evaluation&lt;/div&gt;&lt;div id="armRes" class="result-output"&gt;153 is an Armstrong number!&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function checkArmstrong() {
+    const s = document.getElementById('armInp').value.trim();
+    const num = parseInt(s);
+    const p = s.length;
+    const sum = s.split('').reduce((acc, d) =&gt; acc + Math.pow(parseInt(d), p), 0);
+    const isArm = sum === num;
+    document.getElementById('armRes').innerHTML = `${num} ${isArm ? '&lt;span style="color:var(--accent-emerald)"&gt;IS an Armstrong number!&lt;/span&gt;' : '&lt;span style="color:var(--accent-rose)"&gt;NOT an Armstrong number&lt;/span&gt;'}`;
+}
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="js-50.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-amber);">📋 Core JS List</a>
+                </div>
+                <a href="js-52.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Core JavaScript Module &bull; Program 51 of 67 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

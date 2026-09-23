@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Program #20: Date and Math Objects</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-amber), var(--accent-rose));">Core JS #20</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="index.html" class="active">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="../mini-projects/index.html">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">Core JavaScript</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #20</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="js-19.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 Core List</a>
+                    <a href="js-21.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-amber);">
+                <span class="experiment-badge" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">CORE JS EXPERIMENT #20 OF 67</span>
+                <h1 class="experiment-title">Date and Math Objects</h1>
+                <p class="experiment-desc">Live clock formatted with Date object and common Math functions (random, round, ceil, pow).</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-amber); box-shadow: 0 0 8px var(--accent-amber);"></span> Interactive JavaScript Demo</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">js-20.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 480px; margin: 0 auto; text-align: center;">
+    <div id="dateClock" style="font-size: 1.4rem; font-family: var(--font-mono); color: var(--accent-teal); margin-bottom: 1rem;">Loading Date...</div>
+    <div style="display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 1rem;">
+        <button class="btn btn-outline btn-sm" onclick="testMath('rand')">Math.random()</button>
+        <button class="btn btn-outline btn-sm" onclick="testMath('pi')">Math.PI</button>
+        <button class="btn btn-outline btn-sm" onclick="testMath('sqrt')">Math.sqrt(144)</button>
+    </div>
+    <div class="result-box"><div class="result-box-title">Math Output</div><div id="mathRes" class="result-output">Random value: 0.842</div></div>
+</div>
+<script>
+function updateClock() {
+    const d = new Date();
+    document.getElementById('dateClock').innerText = d.toUTCString();
+}
+setInterval(updateClock, 1000); updateClock();
+function testMath(m) {
+    let r = '';
+    if(m === 'rand') r = 'Random (1-100): ' + Math.floor(Math.random() * 100 + 1);
+    else if(m === 'pi') r = 'PI: ' + Math.PI.toFixed(6);
+    else if(m === 'sqrt') r = 'sqrt(144) = ' + Math.sqrt(144);
+    document.getElementById('mathRes').innerText = r;
+}
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-amber);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 480px; margin: 0 auto; text-align: center;"&gt;
+    &lt;div id="dateClock" style="font-size: 1.4rem; font-family: var(--font-mono); color: var(--accent-teal); margin-bottom: 1rem;"&gt;Loading Date...&lt;/div&gt;
+    &lt;div style="display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 1rem;"&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="testMath('rand')"&gt;Math.random()&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="testMath('pi')"&gt;Math.PI&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="testMath('sqrt')"&gt;Math.sqrt(144)&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="result-box"&gt;&lt;div class="result-box-title"&gt;Math Output&lt;/div&gt;&lt;div id="mathRes" class="result-output"&gt;Random value: 0.842&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function updateClock() {
+    const d = new Date();
+    document.getElementById('dateClock').innerText = d.toUTCString();
+}
+setInterval(updateClock, 1000); updateClock();
+function testMath(m) {
+    let r = '';
+    if(m === 'rand') r = 'Random (1-100): ' + Math.floor(Math.random() * 100 + 1);
+    else if(m === 'pi') r = 'PI: ' + Math.PI.toFixed(6);
+    else if(m === 'sqrt') r = 'sqrt(144) = ' + Math.sqrt(144);
+    document.getElementById('mathRes').innerText = r;
+}
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="js-19.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-amber);">📋 Core JS List</a>
+                </div>
+                <a href="js-21.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Core JavaScript Module &bull; Program 20 of 67 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

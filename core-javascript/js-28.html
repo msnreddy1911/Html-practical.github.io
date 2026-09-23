@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Program #28: Simple Calculator Using HTML, CSS, and JavaScript</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-amber), var(--accent-rose));">Core JS #28</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="index.html" class="active">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="../mini-projects/index.html">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">Core JavaScript</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #28</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="js-27.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 Core List</a>
+                    <a href="js-29.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-amber);">
+                <span class="experiment-badge" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">CORE JS EXPERIMENT #28 OF 67</span>
+                <h1 class="experiment-title">Simple Calculator Using HTML, CSS, and JavaScript</h1>
+                <p class="experiment-desc">Interactive calculator keypad with evaluation and clear buttons.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-amber); box-shadow: 0 0 8px var(--accent-amber);"></span> Interactive JavaScript Demo</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">js-28.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 260px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1rem; box-shadow: var(--shadow-md);">
+    <input type="text" id="calcScreen" readonly style="width: 100%; padding: 0.75rem; background: #0f172a; border: 1px solid var(--border-color); border-radius: 6px; color: #fff; font-family: var(--font-mono); font-size: 1.25rem; text-align: right; margin-bottom: 0.75rem;" value="0">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem;">
+        <button class="btn btn-outline btn-sm" onclick="calcPress('C')">C</button>
+        <button class="btn btn-outline btn-sm" onclick="calcPress('/')">&divide;</button>
+        <button class="btn btn-outline btn-sm" onclick="calcPress('*')">&times;</button>
+        <button class="btn btn-danger btn-sm" onclick="calcPress('DEL')">&larr;</button>
+        <button class="btn btn-outline btn-sm" onclick="calcPress('7')">7</button>
+        <button class="btn btn-outline btn-sm" onclick="calcPress('8')">8</button>
+        <button class="btn btn-outline btn-sm" onclick="calcPress('9')">9</button>
+        <button class="btn btn-outline btn-sm" onclick="calcPress('-')">-</button>
+        <button class="btn btn-outline btn-sm" onclick="calcPress('4')">4</button>
+        <button class="btn btn-outline btn-sm" onclick="calcPress('5')">5</button>
+        <button class="btn btn-outline btn-sm" onclick="calcPress('6')">6</button>
+        <button class="btn btn-outline btn-sm" onclick="calcPress('+')">+</button>
+        <button class="btn btn-outline btn-sm" onclick="calcPress('1')">1</button>
+        <button class="btn btn-outline btn-sm" onclick="calcPress('2')">2</button>
+        <button class="btn btn-outline btn-sm" onclick="calcPress('3')">3</button>
+        <button class="btn btn-primary btn-sm" onclick="calcEval()" style="grid-row: span 2;">=</button>
+        <button class="btn btn-outline btn-sm" onclick="calcPress('0')" style="grid-column: span 2;">0</button>
+        <button class="btn btn-outline btn-sm" onclick="calcPress('.')">.</button>
+    </div>
+</div>
+<script>
+let expr = '';
+function calcPress(val) {
+    const s = document.getElementById('calcScreen');
+    if(val === 'C') expr = '';
+    else if(val === 'DEL') expr = expr.slice(0, -1);
+    else expr += val;
+    s.value = expr || '0';
+}
+function calcEval() {
+    try {
+        expr = Function('"use strict";return (' + expr + ')')().toString();
+        document.getElementById('calcScreen').value = expr;
+    } catch(e) { document.getElementById('calcScreen').value = 'Error'; expr = ''; }
+}
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-amber);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 260px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1rem; box-shadow: var(--shadow-md);"&gt;
+    &lt;input type="text" id="calcScreen" readonly style="width: 100%; padding: 0.75rem; background: #0f172a; border: 1px solid var(--border-color); border-radius: 6px; color: #fff; font-family: var(--font-mono); font-size: 1.25rem; text-align: right; margin-bottom: 0.75rem;" value="0"&gt;
+    &lt;div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem;"&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('C')"&gt;C&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('/')"&gt;&amp;divide;&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('*')"&gt;&amp;times;&lt;/button&gt;
+        &lt;button class="btn btn-danger btn-sm" onclick="calcPress('DEL')"&gt;&amp;larr;&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('7')"&gt;7&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('8')"&gt;8&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('9')"&gt;9&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('-')"&gt;-&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('4')"&gt;4&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('5')"&gt;5&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('6')"&gt;6&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('+')"&gt;+&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('1')"&gt;1&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('2')"&gt;2&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('3')"&gt;3&lt;/button&gt;
+        &lt;button class="btn btn-primary btn-sm" onclick="calcEval()" style="grid-row: span 2;"&gt;=&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('0')" style="grid-column: span 2;"&gt;0&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="calcPress('.')"&gt;.&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+let expr = '';
+function calcPress(val) {
+    const s = document.getElementById('calcScreen');
+    if(val === 'C') expr = '';
+    else if(val === 'DEL') expr = expr.slice(0, -1);
+    else expr += val;
+    s.value = expr || '0';
+}
+function calcEval() {
+    try {
+        expr = Function('"use strict";return (' + expr + ')')().toString();
+        document.getElementById('calcScreen').value = expr;
+    } catch(e) { document.getElementById('calcScreen').value = 'Error'; expr = ''; }
+}
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="js-27.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-amber);">📋 Core JS List</a>
+                </div>
+                <a href="js-29.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Core JavaScript Module &bull; Program 28 of 67 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

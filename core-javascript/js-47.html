@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Program #47: Complete Interactive Webpage Using HTML, CSS, and JavaScript</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-amber), var(--accent-rose));">Core JS #47</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="index.html" class="active">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="../mini-projects/index.html">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">Core JavaScript</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #47</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="js-46.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 Core List</a>
+                    <a href="js-48.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-amber);">
+                <span class="experiment-badge" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">CORE JS EXPERIMENT #47 OF 67</span>
+                <h1 class="experiment-title">Complete Interactive Webpage Using HTML, CSS, and JavaScript</h1>
+                <p class="experiment-desc">Integrates interactive DOM manipulation, responsive styling, and dynamic calculation.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-amber); box-shadow: 0 0 8px var(--accent-amber);"></span> Interactive JavaScript Demo</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">js-47.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="background: var(--bg-card); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;">
+    <h3 id="interactiveHeading" style="color: var(--accent-primary); margin-bottom: 0.5rem;">Unified Interactive Experience</h3>
+    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Clicking triggers dynamic theme highlights, counter updates, and animated responses.</p>
+    <button class="btn btn-primary" onclick="const h = document.getElementById('interactiveHeading'); h.style.color = h.style.color === 'var(--accent-teal)' ? 'var(--accent-pink)' : 'var(--accent-teal)';">Pulse Color State</button>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-amber);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="background: var(--bg-card); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;"&gt;
+    &lt;h3 id="interactiveHeading" style="color: var(--accent-primary); margin-bottom: 0.5rem;"&gt;Unified Interactive Experience&lt;/h3&gt;
+    &lt;p style="color: var(--text-secondary); margin-bottom: 1rem;"&gt;Clicking triggers dynamic theme highlights, counter updates, and animated responses.&lt;/p&gt;
+    &lt;button class="btn btn-primary" onclick="const h = document.getElementById('interactiveHeading'); h.style.color = h.style.color === 'var(--accent-teal)' ? 'var(--accent-pink)' : 'var(--accent-teal)';"&gt;Pulse Color State&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="js-46.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-amber);">📋 Core JS List</a>
+                </div>
+                <a href="js-48.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Core JavaScript Module &bull; Program 47 of 67 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

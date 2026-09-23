@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Program #16: Program Using Arrow Functions</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-amber), var(--accent-rose));">Core JS #16</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML</a>
+                <a href="../css/index.html">🎨 CSS</a>
+                <a href="index.html" class="active">💡 Core JS</a>
+                <a href="../dom-manipulation/index.html">🌳 DOM</a>
+                <a href="../events/index.html">⚡ Events</a>
+                <a href="../forms-validation/index.html">📝 Forms</a>
+                <a href="../browser-storage/index.html">💾 Storage</a>
+                <a href="../mini-projects/index.html">🚀 Projects</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">Core JavaScript</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #16</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="js-15.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 Core List</a>
+                    <a href="js-17.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-amber);">
+                <span class="experiment-badge" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">CORE JS EXPERIMENT #16 OF 67</span>
+                <h1 class="experiment-title">Program Using Arrow Functions</h1>
+                <p class="experiment-desc">Demonstrates ES6 fat arrow syntax () => {}, lexical this, and concise implicit return expressions.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-amber); box-shadow: 0 0 8px var(--accent-amber);"></span> Interactive JavaScript Demo</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">js-16.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="max-width: 450px; margin: 0 auto; text-align: center;">
+    <input type="number" id="arrowNum" class="form-control" value="7" style="margin-bottom: 1rem;">
+    <div style="display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 1rem;">
+        <button class="btn btn-outline btn-sm" onclick="runArrow('sq')">Square (x => x*x)</button>
+        <button class="btn btn-outline btn-sm" onclick="runArrow('cb')">Cube (x => x**3)</button>
+    </div>
+    <div class="result-box"><div class="result-box-title">Arrow Output</div><div id="arrowRes" class="result-output">Square of 7 is 49</div></div>
+</div>
+<script>
+const square = x => x * x;
+const cube = x => x ** 3;
+function runArrow(type) {
+    const n = parseFloat(document.getElementById('arrowNum').value) || 0;
+    const res = type === 'sq' ? square(n) : cube(n);
+    document.getElementById('arrowRes').innerText = `${type === 'sq' ? 'Square' : 'Cube'} of ${n} is ${res}`;
+}
+</script>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-amber);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="max-width: 450px; margin: 0 auto; text-align: center;"&gt;
+    &lt;input type="number" id="arrowNum" class="form-control" value="7" style="margin-bottom: 1rem;"&gt;
+    &lt;div style="display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 1rem;"&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="runArrow('sq')"&gt;Square (x =&gt; x*x)&lt;/button&gt;
+        &lt;button class="btn btn-outline btn-sm" onclick="runArrow('cb')"&gt;Cube (x =&gt; x**3)&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="result-box"&gt;&lt;div class="result-box-title"&gt;Arrow Output&lt;/div&gt;&lt;div id="arrowRes" class="result-output"&gt;Square of 7 is 49&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+const square = x =&gt; x * x;
+const cube = x =&gt; x ** 3;
+function runArrow(type) {
+    const n = parseFloat(document.getElementById('arrowNum').value) || 0;
+    const res = type === 'sq' ? square(n) : cube(n);
+    document.getElementById('arrowRes').innerText = `${type === 'sq' ? 'Square' : 'Cube'} of ${n} is ${res}`;
+}
+&lt;/script&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="js-15.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-amber);">📋 Core JS List</a>
+                </div>
+                <a href="js-17.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Core JavaScript Module &bull; Program 16 of 67 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>
