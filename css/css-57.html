@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Program #57: Online Shopping Webpage Using CSS</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-teal), var(--accent-primary));">CSS #57</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML Programs</a>
+                <a href="index.html" class="active">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">CSS Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #57</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="css-56.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All CSS</a>
+                    <a href="css-58.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #57 OF 75</span>
+                <h1 class="experiment-title">Online Shopping Webpage Using CSS</h1>
+                <p class="experiment-desc">E-commerce storefront with filtering category chips and item product grid.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live CSS Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">css-57.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="background: var(--bg-card); border-radius: 8px; border: 1px solid var(--border-color); padding: 1.5rem;">
+    <div style="display: flex; gap: 0.5rem; margin-bottom: 1.25rem; overflow-x: auto;">
+        <button class="filter-tag active">All Products</button>
+        <button class="filter-tag">Footwear</button>
+        <button class="filter-tag">Apparel</button>
+        <button class="filter-tag">Watches</button>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+        <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 6px; padding: 1rem; text-align: center;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">👟</div>
+            <strong style="display: block;">Running Shoes</strong>
+            <span style="color: var(--accent-teal); font-weight: bold;">$89.99</span>
+        </div>
+        <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 6px; padding: 1rem; text-align: center;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⌚</div>
+            <strong style="display: block;">Smart Chrono</strong>
+            <span style="color: var(--accent-teal); font-weight: bold;">$199.99</span>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="background: var(--bg-card); border-radius: 8px; border: 1px solid var(--border-color); padding: 1.5rem;"&gt;
+    &lt;div style="display: flex; gap: 0.5rem; margin-bottom: 1.25rem; overflow-x: auto;"&gt;
+        &lt;button class="filter-tag active"&gt;All Products&lt;/button&gt;
+        &lt;button class="filter-tag"&gt;Footwear&lt;/button&gt;
+        &lt;button class="filter-tag"&gt;Apparel&lt;/button&gt;
+        &lt;button class="filter-tag"&gt;Watches&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;"&gt;
+        &lt;div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 6px; padding: 1rem; text-align: center;"&gt;
+            &lt;div style="font-size: 2rem; margin-bottom: 0.5rem;"&gt;👟&lt;/div&gt;
+            &lt;strong style="display: block;"&gt;Running Shoes&lt;/strong&gt;
+            &lt;span style="color: var(--accent-teal); font-weight: bold;"&gt;$89.99&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 6px; padding: 1rem; text-align: center;"&gt;
+            &lt;div style="font-size: 2rem; margin-bottom: 0.5rem;"&gt;⌚&lt;/div&gt;
+            &lt;strong style="display: block;"&gt;Smart Chrono&lt;/strong&gt;
+            &lt;span style="color: var(--accent-teal); font-weight: bold;"&gt;$199.99&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="css-56.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 CSS Program List</a>
+                </div>
+                <a href="css-58.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">CSS Programs Module &bull; Program 57 of 75 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

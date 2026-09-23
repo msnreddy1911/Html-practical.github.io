@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Program #21: College/Student Profile Page Using HTML and CSS</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-teal), var(--accent-primary));">CSS #21</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML Programs</a>
+                <a href="index.html" class="active">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">CSS Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #21</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="css-20.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All CSS</a>
+                    <a href="css-22.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #21 OF 75</span>
+                <h1 class="experiment-title">College/Student Profile Page Using HTML and CSS</h1>
+                <p class="experiment-desc">A student identity card layout detailing department, registration number, and enrolled subjects.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live CSS Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">css-21.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="background: var(--bg-card); max-width: 480px; margin: 0 auto; border-radius: 10px; border: 1px solid var(--border-color); padding: 1.75rem;">
+    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+        <div style="width: 60px; height: 60px; border-radius: 8px; background: var(--accent-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.25rem;">ENG</div>
+        <div>
+            <h4 style="color: var(--text-primary); margin-bottom: 0.2rem;">M. Surya Nivas Reddy</h4>
+            <p style="color: var(--accent-teal); font-size: 0.85rem;">Reg: 21BCE1024 &bull; Dept: CSE</p>
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+        <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-muted);">Current Semester:</span> <span>IV Semester</span></div>
+        <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-muted);">Cumulative GPA:</span> <span style="color: var(--accent-emerald); font-weight: bold;">9.2 / 10.0</span></div>
+        <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-muted);">Lab Group:</span> <span>Section A - Batch 2</span></div>
+    </div>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="background: var(--bg-card); max-width: 480px; margin: 0 auto; border-radius: 10px; border: 1px solid var(--border-color); padding: 1.75rem;"&gt;
+    &lt;div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;"&gt;
+        &lt;div style="width: 60px; height: 60px; border-radius: 8px; background: var(--accent-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.25rem;"&gt;ENG&lt;/div&gt;
+        &lt;div&gt;
+            &lt;h4 style="color: var(--text-primary); margin-bottom: 0.2rem;"&gt;M. Surya Nivas Reddy&lt;/h4&gt;
+            &lt;p style="color: var(--accent-teal); font-size: 0.85rem;"&gt;Reg: 21BCE1024 &amp;bull; Dept: CSE&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;"&gt;
+        &lt;div style="display: flex; justify-content: space-between;"&gt;&lt;span style="color: var(--text-muted);"&gt;Current Semester:&lt;/span&gt; &lt;span&gt;IV Semester&lt;/span&gt;&lt;/div&gt;
+        &lt;div style="display: flex; justify-content: space-between;"&gt;&lt;span style="color: var(--text-muted);"&gt;Cumulative GPA:&lt;/span&gt; &lt;span style="color: var(--accent-emerald); font-weight: bold;"&gt;9.2 / 10.0&lt;/span&gt;&lt;/div&gt;
+        &lt;div style="display: flex; justify-content: space-between;"&gt;&lt;span style="color: var(--text-muted);"&gt;Lab Group:&lt;/span&gt; &lt;span&gt;Section A - Batch 2&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="css-20.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 CSS Program List</a>
+                </div>
+                <a href="css-22.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">CSS Programs Module &bull; Program 21 of 75 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

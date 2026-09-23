@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Program #26: CSS Inheritance and Specificity</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-teal), var(--accent-primary));">CSS #26</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML Programs</a>
+                <a href="index.html" class="active">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">CSS Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #26</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="css-25.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All CSS</a>
+                    <a href="css-27.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #26 OF 75</span>
+                <h1 class="experiment-title">CSS Inheritance and Specificity</h1>
+                <p class="experiment-desc">Demonstrates the cascade hierarchy: !important > inline > #id > .class > element, and inherited vs non-inherited properties.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live CSS Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">css-26.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="background: var(--bg-card); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); font-family: sans-serif; color: #94a3b8;">
+    <p>This paragraph inherits <code>font-family</code> and <code>color</code> from parent container.</p>
+    <div id="demo-spec-id" class="demo-spec-class" style="border: 1px solid var(--border-color); padding: 1rem; border-radius: 6px; margin-top: 0.5rem; color: #818cf8;">
+        <strong>Specificity Order:</strong> ID Selector (Score 0,1,0,0) overrides Class (0,0,1,0) and Element (0,0,0,1).
+    </div>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="background: var(--bg-card); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); font-family: sans-serif; color: #94a3b8;"&gt;
+    &lt;p&gt;This paragraph inherits &lt;code&gt;font-family&lt;/code&gt; and &lt;code&gt;color&lt;/code&gt; from parent container.&lt;/p&gt;
+    &lt;div id="demo-spec-id" class="demo-spec-class" style="border: 1px solid var(--border-color); padding: 1rem; border-radius: 6px; margin-top: 0.5rem; color: #818cf8;"&gt;
+        &lt;strong&gt;Specificity Order:&lt;/strong&gt; ID Selector (Score 0,1,0,0) overrides Class (0,0,1,0) and Element (0,0,0,1).
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="css-25.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 CSS Program List</a>
+                </div>
+                <a href="css-27.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">CSS Programs Module &bull; Program 26 of 75 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

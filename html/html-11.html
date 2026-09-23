@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Program #11: Internal and External CSS Styling</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge">HTML #11</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="index.html" class="active">📄 HTML Programs</a>
+                <a href="../css/index.html">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">HTML Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #11</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="html-10.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All HTML</a>
+                    <a href="html-12.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card">
+                <span class="experiment-badge">EXPERIMENT #11 OF 15</span>
+                <h1 class="experiment-title">Internal and External CSS Styling</h1>
+                <p class="experiment-desc">Demonstrates the cascade and usage of internal stylesheets (<style>) versus external link stylesheets (<link rel='stylesheet'>).</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">html-11.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+    <div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 2px solid var(--accent-primary);">
+        <span style="font-size: 0.75rem; background: var(--accent-primary); color: white; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: bold;">EXTERNAL CSS</span>
+        <h3 style="margin-top: 0.75rem;">Global Consistency</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">External stylesheets link via <code>&lt;link rel="stylesheet" href="../assets/css/style.css"&gt;</code>. Ideal for keeping visual styling uniform across hundreds of HTML pages.</p>
+    </div>
+    <div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 2px dashed var(--accent-teal);">
+        <span style="font-size: 0.75rem; background: var(--accent-teal); color: white; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: bold;">INTERNAL CSS</span>
+        <h3 style="margin-top: 0.75rem;">Page-Scoped Rules</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Internal styles are declared inside <code>&lt;style&gt;</code> tags in the <code>&lt;head&gt;</code>. Used for document-specific styling without altering global styles.</p>
+    </div>
+</div>
+        
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-primary);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;"&gt;
+    &lt;div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 2px solid var(--accent-primary);"&gt;
+        &lt;span style="font-size: 0.75rem; background: var(--accent-primary); color: white; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: bold;"&gt;EXTERNAL CSS&lt;/span&gt;
+        &lt;h3 style="margin-top: 0.75rem;"&gt;Global Consistency&lt;/h3&gt;
+        &lt;p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;"&gt;External stylesheets link via &lt;code&gt;&amp;lt;link rel="stylesheet" href="../assets/css/style.css"&amp;gt;&lt;/code&gt;. Ideal for keeping visual styling uniform across hundreds of HTML pages.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 2px dashed var(--accent-teal);"&gt;
+        &lt;span style="font-size: 0.75rem; background: var(--accent-teal); color: white; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: bold;"&gt;INTERNAL CSS&lt;/span&gt;
+        &lt;h3 style="margin-top: 0.75rem;"&gt;Page-Scoped Rules&lt;/h3&gt;
+        &lt;p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;"&gt;Internal styles are declared inside &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; tags in the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;. Used for document-specific styling without altering global styles.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="html-10.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary">📋 HTML Program List</a>
+                </div>
+                <a href="html-12.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">HTML Programs Module &bull; 15 of 212 Total Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

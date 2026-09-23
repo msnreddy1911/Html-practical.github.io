@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Program #08: Float and Clear Properties</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-teal), var(--accent-primary));">CSS #08</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML Programs</a>
+                <a href="index.html" class="active">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">CSS Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #08</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="css-07.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All CSS</a>
+                    <a href="css-09.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #08 OF 75</span>
+                <h1 class="experiment-title">Float and Clear Properties</h1>
+                <p class="experiment-desc">Illustrates floating elements left and right with clearfix to prevent container collapse.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live CSS Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">css-08.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="background: var(--bg-card); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color);">
+    <div style="float: left; width: 140px; height: 100px; background: var(--accent-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 6px; margin-right: 1.25rem; margin-bottom: 0.5rem;">
+        float: left
+    </div>
+    <div style="float: right; width: 140px; height: 100px; background: var(--accent-teal); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 6px; margin-left: 1.25rem; margin-bottom: 0.5rem;">
+        float: right
+    </div>
+    <p style="color: var(--text-secondary); line-height: 1.6;">Float removes an element from normal flow, placing it along the left or right of its container. Text and inline elements wrap smoothly around it until a clear or clearfix rule resets the boundary.</p>
+    <div style="clear: both; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-color); color: var(--accent-amber); font-weight: bold;">
+        &bull; clear: both ensures subsequent content begins beneath the floated boxes.
+    </div>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="background: var(--bg-card); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color);"&gt;
+    &lt;div style="float: left; width: 140px; height: 100px; background: var(--accent-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 6px; margin-right: 1.25rem; margin-bottom: 0.5rem;"&gt;
+        float: left
+    &lt;/div&gt;
+    &lt;div style="float: right; width: 140px; height: 100px; background: var(--accent-teal); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 6px; margin-left: 1.25rem; margin-bottom: 0.5rem;"&gt;
+        float: right
+    &lt;/div&gt;
+    &lt;p style="color: var(--text-secondary); line-height: 1.6;"&gt;Float removes an element from normal flow, placing it along the left or right of its container. Text and inline elements wrap smoothly around it until a clear or clearfix rule resets the boundary.&lt;/p&gt;
+    &lt;div style="clear: both; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-color); color: var(--accent-amber); font-weight: bold;"&gt;
+        &amp;bull; clear: both ensures subsequent content begins beneath the floated boxes.
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="css-07.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 CSS Program List</a>
+                </div>
+                <a href="css-09.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">CSS Programs Module &bull; Program 8 of 75 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

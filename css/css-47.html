@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Program #47: Dashboard Layout Using CSS Grid</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-teal), var(--accent-primary));">CSS #47</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML Programs</a>
+                <a href="index.html" class="active">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">CSS Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #47</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="css-46.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All CSS</a>
+                    <a href="css-48.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #47 OF 75</span>
+                <h1 class="experiment-title">Dashboard Layout Using CSS Grid</h1>
+                <p class="experiment-desc">An administrative analytics dashboard with sidebar, topbar, statistic metrics, and chart placeholder.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live CSS Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">css-47.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="display: grid; grid-template-columns: 180px 1fr; grid-template-rows: 50px 1fr; height: 260px; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
+    <div style="grid-column: 1 / -1; background: #1e293b; padding: 0.75rem 1rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;"><strong>Admin Portal</strong> <span>surya@lab</span></div>
+    <div style="background: #0f172a; padding: 1rem; border-right: 1px solid var(--border-color); font-size: 0.85rem; color: #94a3b8; display: flex; flex-direction: column; gap: 0.5rem;">
+        <span style="color: #fff;">📊 Overview</span><span>⚙️ Settings</span><span>📁 Logs</span>
+    </div>
+    <div style="padding: 1rem; background: var(--bg-primary); display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+        <div style="background: var(--bg-card); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color);">Users: <strong>1,420</strong></div>
+        <div style="background: var(--bg-card); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color);">Uptime: <strong style="color: var(--accent-emerald);">99.9%</strong></div>
+    </div>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="display: grid; grid-template-columns: 180px 1fr; grid-template-rows: 50px 1fr; height: 260px; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;"&gt;
+    &lt;div style="grid-column: 1 / -1; background: #1e293b; padding: 0.75rem 1rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;"&gt;&lt;strong&gt;Admin Portal&lt;/strong&gt; &lt;span&gt;surya@lab&lt;/span&gt;&lt;/div&gt;
+    &lt;div style="background: #0f172a; padding: 1rem; border-right: 1px solid var(--border-color); font-size: 0.85rem; color: #94a3b8; display: flex; flex-direction: column; gap: 0.5rem;"&gt;
+        &lt;span style="color: #fff;"&gt;📊 Overview&lt;/span&gt;&lt;span&gt;⚙️ Settings&lt;/span&gt;&lt;span&gt;📁 Logs&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style="padding: 1rem; background: var(--bg-primary); display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;"&gt;
+        &lt;div style="background: var(--bg-card); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color);"&gt;Users: &lt;strong&gt;1,420&lt;/strong&gt;&lt;/div&gt;
+        &lt;div style="background: var(--bg-card); padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color);"&gt;Uptime: &lt;strong style="color: var(--accent-emerald);"&gt;99.9%&lt;/strong&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="css-46.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 CSS Program List</a>
+                </div>
+                <a href="css-48.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">CSS Programs Module &bull; Program 47 of 75 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

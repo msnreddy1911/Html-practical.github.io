@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Program #08: Semantic HTML5 Elements (<header>, <nav>, <section>, <article>, <footer>)</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge">HTML #08</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="index.html" class="active">📄 HTML Programs</a>
+                <a href="../css/index.html">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">HTML Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #08</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="html-07.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All HTML</a>
+                    <a href="html-09.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card">
+                <span class="experiment-badge">EXPERIMENT #08 OF 15</span>
+                <h1 class="experiment-title">Semantic HTML5 Elements (<header>, <nav>, <section>, <article>, <footer>)</h1>
+                <p class="experiment-desc">Demonstrates semantic structural elements providing search engine optimization (SEO), accessibility (a11y), and clean document semantics.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">html-08.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="border: 2px dashed var(--accent-primary); border-radius: var(--radius-lg); padding: 1rem; background: var(--bg-secondary);">
+    <header style="background: rgba(99, 102, 241, 0.2); padding: 1rem; border-radius: var(--radius-md); text-align: center; margin-bottom: 1rem;">
+        <h3 style="color: var(--accent-primary);">&lt;header&gt; Header Component</h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary);">Contains introductory information, logos, or primary navigation</p>
+    </header>
+    <nav style="background: rgba(20, 184, 166, 0.2); padding: 0.75rem; border-radius: var(--radius-md); text-align: center; margin-bottom: 1rem;">
+        <strong style="color: var(--accent-teal);">&lt;nav&gt; Navigation Bar:</strong> [Home] | [Articles] | [About] | [Contact]
+    </nav>
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+        <main style="background: rgba(236, 72, 153, 0.15); padding: 1rem; border-radius: var(--radius-md);">
+            <strong style="color: var(--accent-pink);">&lt;main&gt; Primary Document Content</strong>
+            <article style="background: var(--bg-card); padding: 0.75rem; margin-top: 0.5rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+                <h4>&lt;article&gt; Self-Contained Article 1</h4>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">A standalone syndicatable entry such as a blog post or news item.</p>
+            </article>
+        </main>
+        <aside style="background: rgba(245, 158, 11, 0.15); padding: 1rem; border-radius: var(--radius-md);">
+            <strong style="color: var(--accent-amber);">&lt;aside&gt; Sidebar</strong>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Tangentially related items, advertisements, or quick links.</p>
+        </aside>
+    </div>
+    <footer style="background: rgba(100, 116, 139, 0.2); padding: 0.85rem; border-radius: var(--radius-md); text-align: center;">
+        <small style="color: var(--text-muted);">&lt;footer&gt; Copyright &copy; 2026 Practical Web Technologies</small>
+    </footer>
+</div>
+        
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-primary);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="border: 2px dashed var(--accent-primary); border-radius: var(--radius-lg); padding: 1rem; background: var(--bg-secondary);"&gt;
+    &lt;header style="background: rgba(99, 102, 241, 0.2); padding: 1rem; border-radius: var(--radius-md); text-align: center; margin-bottom: 1rem;"&gt;
+        &lt;h3 style="color: var(--accent-primary);"&gt;&amp;lt;header&amp;gt; Header Component&lt;/h3&gt;
+        &lt;p style="font-size: 0.85rem; color: var(--text-secondary);"&gt;Contains introductory information, logos, or primary navigation&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;nav style="background: rgba(20, 184, 166, 0.2); padding: 0.75rem; border-radius: var(--radius-md); text-align: center; margin-bottom: 1rem;"&gt;
+        &lt;strong style="color: var(--accent-teal);"&gt;&amp;lt;nav&amp;gt; Navigation Bar:&lt;/strong&gt; [Home] | [Articles] | [About] | [Contact]
+    &lt;/nav&gt;
+    &lt;div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; margin-bottom: 1rem;"&gt;
+        &lt;main style="background: rgba(236, 72, 153, 0.15); padding: 1rem; border-radius: var(--radius-md);"&gt;
+            &lt;strong style="color: var(--accent-pink);"&gt;&amp;lt;main&amp;gt; Primary Document Content&lt;/strong&gt;
+            &lt;article style="background: var(--bg-card); padding: 0.75rem; margin-top: 0.5rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color);"&gt;
+                &lt;h4&gt;&amp;lt;article&amp;gt; Self-Contained Article 1&lt;/h4&gt;
+                &lt;p style="font-size: 0.85rem; color: var(--text-secondary);"&gt;A standalone syndicatable entry such as a blog post or news item.&lt;/p&gt;
+            &lt;/article&gt;
+        &lt;/main&gt;
+        &lt;aside style="background: rgba(245, 158, 11, 0.15); padding: 1rem; border-radius: var(--radius-md);"&gt;
+            &lt;strong style="color: var(--accent-amber);"&gt;&amp;lt;aside&amp;gt; Sidebar&lt;/strong&gt;
+            &lt;p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;"&gt;Tangentially related items, advertisements, or quick links.&lt;/p&gt;
+        &lt;/aside&gt;
+    &lt;/div&gt;
+    &lt;footer style="background: rgba(100, 116, 139, 0.2); padding: 0.85rem; border-radius: var(--radius-md); text-align: center;"&gt;
+        &lt;small style="color: var(--text-muted);"&gt;&amp;lt;footer&amp;gt; Copyright &amp;copy; 2026 Practical Web Technologies&lt;/small&gt;
+    &lt;/footer&gt;
+&lt;/div&gt;
+        </code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="html-07.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary">📋 HTML Program List</a>
+                </div>
+                <a href="html-09.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">HTML Programs Module &bull; 15 of 212 Total Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

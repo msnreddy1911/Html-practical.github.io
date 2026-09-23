@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Program #56: Restaurant Webpage Using HTML and CSS</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-teal), var(--accent-primary));">CSS #56</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML Programs</a>
+                <a href="index.html" class="active">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">CSS Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #56</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="css-55.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All CSS</a>
+                    <a href="css-57.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #56 OF 75</span>
+                <h1 class="experiment-title">Restaurant Webpage Using HTML and CSS</h1>
+                <p class="experiment-desc">A bistro menu webpage featuring special dishes, pricing cards, and reservation CTA.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live CSS Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">css-56.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="background: #18181b; border-radius: 12px; border: 1px solid #27272a; padding: 2rem; color: #f4f4f5; max-width: 600px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 1.5rem;">
+        <span style="color: #f59e0b; font-family: serif; font-style: italic; font-size: 1.1rem;">Authentic Gourmet</span>
+        <h2 style="color: #fff; font-size: 1.75rem;">Le Bistro Italiano</h2>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed #3f3f46; padding-bottom: 0.5rem;">
+            <div><strong>Truffle Tagliolini</strong><div style="font-size: 0.8rem; color: #a1a1aa;">Handmade pasta, black truffle emulsion, parmesan</div></div>
+            <span style="color: #f59e0b; font-weight: bold;">$28</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed #3f3f46; padding-bottom: 0.5rem;">
+            <div><strong>Wood-Fired Margherita</strong><div style="font-size: 0.8rem; color: #a1a1aa;">San Marzano tomatoes, fior di latte, fresh basil</div></div>
+            <span style="color: #f59e0b; font-weight: bold;">$22</span>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="background: #18181b; border-radius: 12px; border: 1px solid #27272a; padding: 2rem; color: #f4f4f5; max-width: 600px; margin: 0 auto;"&gt;
+    &lt;div style="text-align: center; margin-bottom: 1.5rem;"&gt;
+        &lt;span style="color: #f59e0b; font-family: serif; font-style: italic; font-size: 1.1rem;"&gt;Authentic Gourmet&lt;/span&gt;
+        &lt;h2 style="color: #fff; font-size: 1.75rem;"&gt;Le Bistro Italiano&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div style="display: flex; flex-direction: column; gap: 1rem;"&gt;
+        &lt;div style="display: flex; justify-content: space-between; border-bottom: 1px dashed #3f3f46; padding-bottom: 0.5rem;"&gt;
+            &lt;div&gt;&lt;strong&gt;Truffle Tagliolini&lt;/strong&gt;&lt;div style="font-size: 0.8rem; color: #a1a1aa;"&gt;Handmade pasta, black truffle emulsion, parmesan&lt;/div&gt;&lt;/div&gt;
+            &lt;span style="color: #f59e0b; font-weight: bold;"&gt;$28&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div style="display: flex; justify-content: space-between; border-bottom: 1px dashed #3f3f46; padding-bottom: 0.5rem;"&gt;
+            &lt;div&gt;&lt;strong&gt;Wood-Fired Margherita&lt;/strong&gt;&lt;div style="font-size: 0.8rem; color: #a1a1aa;"&gt;San Marzano tomatoes, fior di latte, fresh basil&lt;/div&gt;&lt;/div&gt;
+            &lt;span style="color: #f59e0b; font-weight: bold;"&gt;$22&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="css-55.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 CSS Program List</a>
+                </div>
+                <a href="css-57.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">CSS Programs Module &bull; Program 56 of 75 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

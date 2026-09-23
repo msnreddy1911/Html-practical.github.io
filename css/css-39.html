@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Program #39: Dropdown Menu Using HTML and CSS</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-teal), var(--accent-primary));">CSS #39</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML Programs</a>
+                <a href="index.html" class="active">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">CSS Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #39</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="css-38.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All CSS</a>
+                    <a href="css-40.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #39 OF 75</span>
+                <h1 class="experiment-title">Dropdown Menu Using HTML and CSS</h1>
+                <p class="experiment-desc">Pure CSS dropdown navigation menu driven by hover and focus-within pseudo-classes.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live CSS Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">css-39.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="position: relative; display: inline-block;">
+    <button class="btn btn-primary" style="display: flex; align-items: center; gap: 0.5rem;">Services Menu ▼</button>
+    <div style="background: #1e293b; border: 1px solid var(--border-color); border-radius: 8px; padding: 0.5rem; margin-top: 0.25rem; min-width: 180px; box-shadow: var(--shadow-lg);">
+        <a href="#" style="display: block; padding: 0.5rem; color: #cbd5e1; text-decoration: none; border-radius: 4px;" onmouseover="this.style.background='#334155'" onmouseout="this.style.background='transparent'">Web Engineering</a>
+        <a href="#" style="display: block; padding: 0.5rem; color: #cbd5e1; text-decoration: none; border-radius: 4px;" onmouseover="this.style.background='#334155'" onmouseout="this.style.background='transparent'">UI/UX Design</a>
+        <a href="#" style="display: block; padding: 0.5rem; color: #cbd5e1; text-decoration: none; border-radius: 4px;" onmouseover="this.style.background='#334155'" onmouseout="this.style.background='transparent'">Cloud Systems</a>
+    </div>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="position: relative; display: inline-block;"&gt;
+    &lt;button class="btn btn-primary" style="display: flex; align-items: center; gap: 0.5rem;"&gt;Services Menu ▼&lt;/button&gt;
+    &lt;div style="background: #1e293b; border: 1px solid var(--border-color); border-radius: 8px; padding: 0.5rem; margin-top: 0.25rem; min-width: 180px; box-shadow: var(--shadow-lg);"&gt;
+        &lt;a href="#" style="display: block; padding: 0.5rem; color: #cbd5e1; text-decoration: none; border-radius: 4px;" onmouseover="this.style.background='#334155'" onmouseout="this.style.background='transparent'"&gt;Web Engineering&lt;/a&gt;
+        &lt;a href="#" style="display: block; padding: 0.5rem; color: #cbd5e1; text-decoration: none; border-radius: 4px;" onmouseover="this.style.background='#334155'" onmouseout="this.style.background='transparent'"&gt;UI/UX Design&lt;/a&gt;
+        &lt;a href="#" style="display: block; padding: 0.5rem; color: #cbd5e1; text-decoration: none; border-radius: 4px;" onmouseover="this.style.background='#334155'" onmouseout="this.style.background='transparent'"&gt;Cloud Systems&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="css-38.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 CSS Program List</a>
+                </div>
+                <a href="css-40.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">CSS Programs Module &bull; Program 39 of 75 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

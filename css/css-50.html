@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Program #50: Webpage with Sticky Header</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-teal), var(--accent-primary));">CSS #50</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML Programs</a>
+                <a href="index.html" class="active">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">CSS Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #50</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="css-49.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All CSS</a>
+                    <a href="css-51.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #50 OF 75</span>
+                <h1 class="experiment-title">Webpage with Sticky Header</h1>
+                <p class="experiment-desc">Demonstrating position: sticky with top: 0 sticking during user scroll within container.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live CSS Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">css-50.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="height: 200px; overflow-y: scroll; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-card); position: relative;">
+    <div style="position: sticky; top: 0; background: #6366f1; color: white; padding: 0.75rem 1rem; font-weight: bold; z-index: 10;">
+        Sticky Header (Scroll down to see stickiness)
+    </div>
+    <div style="padding: 1rem; color: var(--text-secondary); line-height: 2;">
+        Paragraph 1: Testing scroll position.<br>
+        Paragraph 2: The header remains affixed at top: 0 within its parent container.<br>
+        Paragraph 3: Clean native behavior without JavaScript scroll listeners.<br>
+        Paragraph 4: Additional scrollable demonstration content.<br>
+        Paragraph 5: End of container.
+    </div>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="height: 200px; overflow-y: scroll; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-card); position: relative;"&gt;
+    &lt;div style="position: sticky; top: 0; background: #6366f1; color: white; padding: 0.75rem 1rem; font-weight: bold; z-index: 10;"&gt;
+        Sticky Header (Scroll down to see stickiness)
+    &lt;/div&gt;
+    &lt;div style="padding: 1rem; color: var(--text-secondary); line-height: 2;"&gt;
+        Paragraph 1: Testing scroll position.&lt;br&gt;
+        Paragraph 2: The header remains affixed at top: 0 within its parent container.&lt;br&gt;
+        Paragraph 3: Clean native behavior without JavaScript scroll listeners.&lt;br&gt;
+        Paragraph 4: Additional scrollable demonstration content.&lt;br&gt;
+        Paragraph 5: End of container.
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="css-49.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 CSS Program List</a>
+                </div>
+                <a href="css-51.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">CSS Programs Module &bull; Program 50 of 75 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

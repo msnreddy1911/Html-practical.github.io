@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Program #42: CSS-Only Button Hover Animations</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-teal), var(--accent-primary));">CSS #42</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML Programs</a>
+                <a href="index.html" class="active">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">CSS Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #42</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="css-41.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All CSS</a>
+                    <a href="css-43.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #42 OF 75</span>
+                <h1 class="experiment-title">CSS-Only Button Hover Animations</h1>
+                <p class="experiment-desc">Creative button hover animations: fill wave, glow pulse, and border slide effects.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live CSS Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">css-42.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; padding: 1.5rem;">
+    <button style="padding: 0.75rem 1.5rem; border: 2px solid #6366f1; background: transparent; color: #fff; font-weight: bold; border-radius: 6px; cursor: pointer; transition: 0.3s;" onmouseover="this.style.background='#6366f1'; this.style.boxShadow='0 0 15px #6366f1';" onmouseout="this.style.background='transparent'; this.style.boxShadow='none';">Glow Border</button>
+    <button style="padding: 0.75rem 1.5rem; border: none; background: #10b981; color: white; font-weight: bold; border-radius: 30px; cursor: pointer; transition: 0.3s;" onmouseover="this.style.letterSpacing='2px'" onmouseout="this.style.letterSpacing='normal'">Expand Spacing</button>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; padding: 1.5rem;"&gt;
+    &lt;button style="padding: 0.75rem 1.5rem; border: 2px solid #6366f1; background: transparent; color: #fff; font-weight: bold; border-radius: 6px; cursor: pointer; transition: 0.3s;" onmouseover="this.style.background='#6366f1'; this.style.boxShadow='0 0 15px #6366f1';" onmouseout="this.style.background='transparent'; this.style.boxShadow='none';"&gt;Glow Border&lt;/button&gt;
+    &lt;button style="padding: 0.75rem 1.5rem; border: none; background: #10b981; color: white; font-weight: bold; border-radius: 30px; cursor: pointer; transition: 0.3s;" onmouseover="this.style.letterSpacing='2px'" onmouseout="this.style.letterSpacing='normal'"&gt;Expand Spacing&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="css-41.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 CSS Program List</a>
+                </div>
+                <a href="css-43.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">CSS Programs Module &bull; Program 42 of 75 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

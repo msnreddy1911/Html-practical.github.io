@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Program #02: Ordered, Unordered, and Description Lists</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge">HTML #02</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="index.html" class="active">📄 HTML Programs</a>
+                <a href="../css/index.html">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">HTML Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #02</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="html-01.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All HTML</a>
+                    <a href="html-03.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card">
+                <span class="experiment-badge">EXPERIMENT #02 OF 15</span>
+                <h1 class="experiment-title">Ordered, Unordered, and Description Lists</h1>
+                <p class="experiment-desc">Showcases ordered lists (<ol>), unordered bulleted lists (<ul>), nested lists, and description lists (<dl>, <dt>, <dd>).</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">html-02.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+    <div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+        <h3 style="color: var(--accent-teal); margin-bottom: 0.75rem;">Unordered List (&lt;ul&gt;)</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Web Development Pillars:</p>
+        <ul style="padding-left: 1.5rem; color: var(--text-primary); line-height: 1.8;">
+            <li>HTML5 - Content & Structure</li>
+            <li>CSS3 - Styling & Layouts
+                <ul style="padding-left: 1.5rem; margin-top: 0.25rem;">
+                    <li>Flexbox & Grid</li>
+                    <li>Animations & Transitions</li>
+                </ul>
+            </li>
+            <li>JavaScript - Interactivity & Logic</li>
+        </ul>
+    </div>
+    <div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+        <h3 style="color: var(--accent-primary); margin-bottom: 0.75rem;">Ordered List (&lt;ol&gt;)</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Execution Steps:</p>
+        <ol style="padding-left: 1.5rem; color: var(--text-primary); line-height: 1.8;">
+            <li>Plan page hierarchy and wireframe</li>
+            <li>Write semantic HTML tags</li>
+            <li>Apply responsive CSS rules</li>
+            <li>Add interactive JavaScript events</li>
+        </ol>
+    </div>
+    <div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+        <h3 style="color: var(--accent-pink); margin-bottom: 0.75rem;">Description List (&lt;dl&gt;)</h3>
+        <dl style="line-height: 1.6;">
+            <dt style="font-weight: 700; color: var(--text-primary);">HTML</dt>
+            <dd style="color: var(--text-secondary); margin-left: 1rem; margin-bottom: 0.5rem;">HyperText Markup Language for document structures.</dd>
+            <dt style="font-weight: 700; color: var(--text-primary);">CSS</dt>
+            <dd style="color: var(--text-secondary); margin-left: 1rem; margin-bottom: 0.5rem;">Cascading Style Sheets for visual styling.</dd>
+            <dt style="font-weight: 700; color: var(--text-primary);">DOM</dt>
+            <dd style="color: var(--text-secondary); margin-left: 1rem;">Document Object Model representing page elements as an object tree.</dd>
+        </dl>
+    </div>
+</div>
+        
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-primary);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;"&gt;
+    &lt;div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);"&gt;
+        &lt;h3 style="color: var(--accent-teal); margin-bottom: 0.75rem;"&gt;Unordered List (&amp;lt;ul&amp;gt;)&lt;/h3&gt;
+        &lt;p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;"&gt;Web Development Pillars:&lt;/p&gt;
+        &lt;ul style="padding-left: 1.5rem; color: var(--text-primary); line-height: 1.8;"&gt;
+            &lt;li&gt;HTML5 - Content &amp; Structure&lt;/li&gt;
+            &lt;li&gt;CSS3 - Styling &amp; Layouts
+                &lt;ul style="padding-left: 1.5rem; margin-top: 0.25rem;"&gt;
+                    &lt;li&gt;Flexbox &amp; Grid&lt;/li&gt;
+                    &lt;li&gt;Animations &amp; Transitions&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;JavaScript - Interactivity &amp; Logic&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);"&gt;
+        &lt;h3 style="color: var(--accent-primary); margin-bottom: 0.75rem;"&gt;Ordered List (&amp;lt;ol&amp;gt;)&lt;/h3&gt;
+        &lt;p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;"&gt;Execution Steps:&lt;/p&gt;
+        &lt;ol style="padding-left: 1.5rem; color: var(--text-primary); line-height: 1.8;"&gt;
+            &lt;li&gt;Plan page hierarchy and wireframe&lt;/li&gt;
+            &lt;li&gt;Write semantic HTML tags&lt;/li&gt;
+            &lt;li&gt;Apply responsive CSS rules&lt;/li&gt;
+            &lt;li&gt;Add interactive JavaScript events&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/div&gt;
+    &lt;div style="background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);"&gt;
+        &lt;h3 style="color: var(--accent-pink); margin-bottom: 0.75rem;"&gt;Description List (&amp;lt;dl&amp;gt;)&lt;/h3&gt;
+        &lt;dl style="line-height: 1.6;"&gt;
+            &lt;dt style="font-weight: 700; color: var(--text-primary);"&gt;HTML&lt;/dt&gt;
+            &lt;dd style="color: var(--text-secondary); margin-left: 1rem; margin-bottom: 0.5rem;"&gt;HyperText Markup Language for document structures.&lt;/dd&gt;
+            &lt;dt style="font-weight: 700; color: var(--text-primary);"&gt;CSS&lt;/dt&gt;
+            &lt;dd style="color: var(--text-secondary); margin-left: 1rem; margin-bottom: 0.5rem;"&gt;Cascading Style Sheets for visual styling.&lt;/dd&gt;
+            &lt;dt style="font-weight: 700; color: var(--text-primary);"&gt;DOM&lt;/dt&gt;
+            &lt;dd style="color: var(--text-secondary); margin-left: 1rem;"&gt;Document Object Model representing page elements as an object tree.&lt;/dd&gt;
+        &lt;/dl&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="html-01.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary">📋 HTML Program List</a>
+                </div>
+                <a href="html-03.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">HTML Programs Module &bull; 15 of 212 Total Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

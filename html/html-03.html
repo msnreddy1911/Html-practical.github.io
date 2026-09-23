@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Program #03: Tables with Rows, Columns, Borders, and Merged Cells</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge">HTML #03</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="index.html" class="active">📄 HTML Programs</a>
+                <a href="../css/index.html">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">HTML Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #03</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="html-02.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All HTML</a>
+                    <a href="html-04.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card">
+                <span class="experiment-badge">EXPERIMENT #03 OF 15</span>
+                <h1 class="experiment-title">Tables with Rows, Columns, Borders, and Merged Cells</h1>
+                <p class="experiment-desc">Demonstrates HTML tables using <table>, <thead>, <tbody>, <tr>, <th>, <td> with cell merging via colspan and rowspan attributes.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">html-03.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="overflow-x: auto;">
+    <table style="width: 100%; border-collapse: collapse; text-align: left; background: var(--bg-card); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color);">
+        <thead>
+            <tr style="background: rgba(99, 102, 241, 0.15); border-bottom: 2px solid var(--border-color);">
+                <th style="padding: 1rem; border: 1px solid var(--border-color);">Department</th>
+                <th style="padding: 1rem; border: 1px solid var(--border-color);">Semester</th>
+                <th style="padding: 1rem; border: 1px solid var(--border-color);">Subject Name</th>
+                <th style="padding: 1rem; border: 1px solid var(--border-color);">Credits</th>
+                <th style="padding: 1rem; border: 1px solid var(--border-color);">Exam Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3" style="padding: 0.85rem; border: 1px solid var(--border-color); font-weight: 600; vertical-align: middle;">Computer Science & Engineering</td>
+                <td rowspan="2" style="padding: 0.85rem; border: 1px solid var(--border-color); vertical-align: middle;">Semester IV</td>
+                <td style="padding: 0.85rem; border: 1px solid var(--border-color);">Web Technologies (HTML, CSS, JS)</td>
+                <td style="padding: 0.85rem; border: 1px solid var(--border-color);">4</td>
+                <td style="padding: 0.85rem; border: 1px solid var(--border-color);">Theory + Lab</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.85rem; border: 1px solid var(--border-color);">Database Management Systems</td>
+                <td style="padding: 0.85rem; border: 1px solid var(--border-color);">4</td>
+                <td style="padding: 0.85rem; border: 1px solid var(--border-color);">Theory + Lab</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.85rem; border: 1px solid var(--border-color);">Semester V</td>
+                <td style="padding: 0.85rem; border: 1px solid var(--border-color);">Operating Systems & Virtualization</td>
+                <td style="padding: 0.85rem; border: 1px solid var(--border-color);">3</td>
+                <td style="padding: 0.85rem; border: 1px solid var(--border-color);">Theory</td>
+            </tr>
+            <tr style="background: rgba(255, 255, 255, 0.03);">
+                <td colspan="3" style="padding: 0.85rem; border: 1px solid var(--border-color); font-weight: 700; text-align: right;">Total Program Cumulative Credits:</td>
+                <td colspan="2" style="padding: 0.85rem; border: 1px solid var(--border-color); font-weight: 700; color: var(--accent-teal);">11 Credits (Verified)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-primary);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="overflow-x: auto;"&gt;
+    &lt;table style="width: 100%; border-collapse: collapse; text-align: left; background: var(--bg-card); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color);"&gt;
+        &lt;thead&gt;
+            &lt;tr style="background: rgba(99, 102, 241, 0.15); border-bottom: 2px solid var(--border-color);"&gt;
+                &lt;th style="padding: 1rem; border: 1px solid var(--border-color);"&gt;Department&lt;/th&gt;
+                &lt;th style="padding: 1rem; border: 1px solid var(--border-color);"&gt;Semester&lt;/th&gt;
+                &lt;th style="padding: 1rem; border: 1px solid var(--border-color);"&gt;Subject Name&lt;/th&gt;
+                &lt;th style="padding: 1rem; border: 1px solid var(--border-color);"&gt;Credits&lt;/th&gt;
+                &lt;th style="padding: 1rem; border: 1px solid var(--border-color);"&gt;Exam Type&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td rowspan="3" style="padding: 0.85rem; border: 1px solid var(--border-color); font-weight: 600; vertical-align: middle;"&gt;Computer Science &amp; Engineering&lt;/td&gt;
+                &lt;td rowspan="2" style="padding: 0.85rem; border: 1px solid var(--border-color); vertical-align: middle;"&gt;Semester IV&lt;/td&gt;
+                &lt;td style="padding: 0.85rem; border: 1px solid var(--border-color);"&gt;Web Technologies (HTML, CSS, JS)&lt;/td&gt;
+                &lt;td style="padding: 0.85rem; border: 1px solid var(--border-color);"&gt;4&lt;/td&gt;
+                &lt;td style="padding: 0.85rem; border: 1px solid var(--border-color);"&gt;Theory + Lab&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td style="padding: 0.85rem; border: 1px solid var(--border-color);"&gt;Database Management Systems&lt;/td&gt;
+                &lt;td style="padding: 0.85rem; border: 1px solid var(--border-color);"&gt;4&lt;/td&gt;
+                &lt;td style="padding: 0.85rem; border: 1px solid var(--border-color);"&gt;Theory + Lab&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td style="padding: 0.85rem; border: 1px solid var(--border-color);"&gt;Semester V&lt;/td&gt;
+                &lt;td style="padding: 0.85rem; border: 1px solid var(--border-color);"&gt;Operating Systems &amp; Virtualization&lt;/td&gt;
+                &lt;td style="padding: 0.85rem; border: 1px solid var(--border-color);"&gt;3&lt;/td&gt;
+                &lt;td style="padding: 0.85rem; border: 1px solid var(--border-color);"&gt;Theory&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style="background: rgba(255, 255, 255, 0.03);"&gt;
+                &lt;td colspan="3" style="padding: 0.85rem; border: 1px solid var(--border-color); font-weight: 700; text-align: right;"&gt;Total Program Cumulative Credits:&lt;/td&gt;
+                &lt;td colspan="2" style="padding: 0.85rem; border: 1px solid var(--border-color); font-weight: 700; color: var(--accent-teal);"&gt;11 Credits (Verified)&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+        </code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="html-02.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary">📋 HTML Program List</a>
+                </div>
+                <a href="html-04.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">HTML Programs Module &bull; 15 of 212 Total Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

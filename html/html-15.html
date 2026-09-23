@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Program #15: Simple Personal Portfolio Webpage Using HTML and CSS</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge">HTML #15</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="index.html" class="active">📄 HTML Programs</a>
+                <a href="../css/index.html">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">HTML Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #15</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="html-14.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All HTML</a>
+                    <a href="#" class="btn btn-outline btn-sm btn-next" style="opacity: 0.5; pointer-events: none;">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card">
+                <span class="experiment-badge">EXPERIMENT #15 OF 15</span>
+                <h1 class="experiment-title">Simple Personal Portfolio Webpage Using HTML and CSS</h1>
+                <p class="experiment-desc">A personal developer portfolio webpage featuring an About Me section, skills showcase, projects gallery, and interactive contact form.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">html-15.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden;">
+    <div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(20, 184, 166, 0.3)); padding: 2rem; text-align: center;">
+        <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--accent-primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: bold; margin: 0 auto 1rem;">
+            SN
+        </div>
+        <h2 style="color: var(--text-primary); margin-bottom: 0.25rem;">M. Surya Nivas Reddy</h2>
+        <p style="color: var(--accent-teal); font-weight: 500;">Front-End Engineer & Web Technologist</p>
+    </div>
+    <div style="padding: 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+        <div>
+            <h4 style="color: var(--text-primary); border-bottom: 2px solid var(--accent-primary); padding-bottom: 0.25rem; margin-bottom: 0.75rem;">About Me</h4>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Passionate student software engineer crafting responsive, accessible, and high-performance web applications using modern HTML5, CSS3, and JavaScript.</p>
+        </div>
+        <div>
+            <h4 style="color: var(--text-primary); border-bottom: 2px solid var(--accent-teal); padding-bottom: 0.25rem; margin-bottom: 0.75rem;">Core Skills</h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span class="stat-pill">HTML5</span>
+                <span class="stat-pill">CSS3 (Grid & Flexbox)</span>
+                <span class="stat-pill">JavaScript (ES6+)</span>
+                <span class="stat-pill">DOM & Events</span>
+                <span class="stat-pill">Bootstrap</span>
+            </div>
+        </div>
+    </div>
+</div>
+        
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-primary);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden;"&gt;
+    &lt;div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(20, 184, 166, 0.3)); padding: 2rem; text-align: center;"&gt;
+        &lt;div style="width: 80px; height: 80px; border-radius: 50%; background: var(--accent-primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: bold; margin: 0 auto 1rem;"&gt;
+            SN
+        &lt;/div&gt;
+        &lt;h2 style="color: var(--text-primary); margin-bottom: 0.25rem;"&gt;M. Surya Nivas Reddy&lt;/h2&gt;
+        &lt;p style="color: var(--accent-teal); font-weight: 500;"&gt;Front-End Engineer &amp; Web Technologist&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style="padding: 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;"&gt;
+        &lt;div&gt;
+            &lt;h4 style="color: var(--text-primary); border-bottom: 2px solid var(--accent-primary); padding-bottom: 0.25rem; margin-bottom: 0.75rem;"&gt;About Me&lt;/h4&gt;
+            &lt;p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;"&gt;Passionate student software engineer crafting responsive, accessible, and high-performance web applications using modern HTML5, CSS3, and JavaScript.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;h4 style="color: var(--text-primary); border-bottom: 2px solid var(--accent-teal); padding-bottom: 0.25rem; margin-bottom: 0.75rem;"&gt;Core Skills&lt;/h4&gt;
+            &lt;div style="display: flex; flex-wrap: wrap; gap: 0.5rem;"&gt;
+                &lt;span class="stat-pill"&gt;HTML5&lt;/span&gt;
+                &lt;span class="stat-pill"&gt;CSS3 (Grid &amp; Flexbox)&lt;/span&gt;
+                &lt;span class="stat-pill"&gt;JavaScript (ES6+)&lt;/span&gt;
+                &lt;span class="stat-pill"&gt;DOM &amp; Events&lt;/span&gt;
+                &lt;span class="stat-pill"&gt;Bootstrap&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="html-14.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary">📋 HTML Program List</a>
+                </div>
+                <a href="#" class="btn btn-outline btn-next" style="opacity: 0.5; pointer-events: none;">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">HTML Programs Module &bull; 15 of 212 Total Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

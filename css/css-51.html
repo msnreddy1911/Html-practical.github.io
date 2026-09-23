@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Program #51: Webpage with Fixed Sidebar</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-teal), var(--accent-primary));">CSS #51</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML Programs</a>
+                <a href="index.html" class="active">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">CSS Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #51</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="css-50.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All CSS</a>
+                    <a href="css-52.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #51 OF 75</span>
+                <h1 class="experiment-title">Webpage with Fixed Sidebar</h1>
+                <p class="experiment-desc">Illustrating a fixed side navigation rail anchored to the left of the page view.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live CSS Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">css-51.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="display: flex; height: 200px; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
+    <div style="width: 140px; background: #1e293b; color: white; padding: 1rem; font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.75rem; border-right: 1px solid var(--border-color);">
+        <strong>Fixed Sidebar</strong>
+        <span>🏠 Home</span>
+        <span>📊 Charts</span>
+        <span>⚙️ Config</span>
+    </div>
+    <div style="flex: 1; padding: 1.25rem; background: var(--bg-primary); overflow-y: auto;">
+        <h4>Main Scrollable Area</h4>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">The sidebar stays anchored while this main area handles content scrolling.</p>
+    </div>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="display: flex; height: 200px; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;"&gt;
+    &lt;div style="width: 140px; background: #1e293b; color: white; padding: 1rem; font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.75rem; border-right: 1px solid var(--border-color);"&gt;
+        &lt;strong&gt;Fixed Sidebar&lt;/strong&gt;
+        &lt;span&gt;🏠 Home&lt;/span&gt;
+        &lt;span&gt;📊 Charts&lt;/span&gt;
+        &lt;span&gt;⚙️ Config&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style="flex: 1; padding: 1.25rem; background: var(--bg-primary); overflow-y: auto;"&gt;
+        &lt;h4&gt;Main Scrollable Area&lt;/h4&gt;
+        &lt;p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;"&gt;The sidebar stays anchored while this main area handles content scrolling.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="css-50.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 CSS Program List</a>
+                </div>
+                <a href="css-52.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">CSS Programs Module &bull; Program 51 of 75 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

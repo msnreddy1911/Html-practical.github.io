@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Program #12: CSS Lists and Tables</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-teal), var(--accent-primary));">CSS #12</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML Programs</a>
+                <a href="index.html" class="active">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">CSS Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #12</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="css-11.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All CSS</a>
+                    <a href="css-13.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #12 OF 75</span>
+                <h1 class="experiment-title">CSS Lists and Tables</h1>
+                <p class="experiment-desc">Zebra striping tables, hover highlights, custom styled counters, and bullet customization.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live CSS Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">css-12.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+    <div>
+        <h4 style="margin-bottom: 0.75rem; color: var(--accent-teal);">Custom Counter List</h4>
+        <ol style="list-style: none; counter-reset: custom-counter; padding-left: 0;">
+            <li style="counter-increment: custom-counter; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span style="background: var(--accent-teal); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold;">1</span> Semantic Markup
+            </li>
+            <li style="counter-increment: custom-counter; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span style="background: var(--accent-teal); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold;">2</span> Cascading Styling
+            </li>
+            <li style="counter-increment: custom-counter; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span style="background: var(--accent-teal); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold;">3</span> Dynamic DOM Scripts
+            </li>
+        </ol>
+    </div>
+    <div>
+        <h4 style="margin-bottom: 0.75rem; color: var(--accent-primary);">Zebra-Striped Styled Table</h4>
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+            <tr style="background: rgba(99,102,241,0.2);"><th style="padding: 0.5rem; text-align: left;">Item</th><th style="padding: 0.5rem;">Price</th></tr>
+            <tr style="background: rgba(255,255,255,0.02);"><td style="padding: 0.5rem;">Domain Name</td><td style="padding: 0.5rem; text-align: center;">$12</td></tr>
+            <tr style="background: rgba(255,255,255,0.06);"><td style="padding: 0.5rem;">Web Hosting</td><td style="padding: 0.5rem; text-align: center;">$45</td></tr>
+            <tr style="background: rgba(255,255,255,0.02);"><td style="padding: 0.5rem;">SSL Certificate</td><td style="padding: 0.5rem; text-align: center;">Free</td></tr>
+        </table>
+    </div>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;"&gt;
+    &lt;div&gt;
+        &lt;h4 style="margin-bottom: 0.75rem; color: var(--accent-teal);"&gt;Custom Counter List&lt;/h4&gt;
+        &lt;ol style="list-style: none; counter-reset: custom-counter; padding-left: 0;"&gt;
+            &lt;li style="counter-increment: custom-counter; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"&gt;
+                &lt;span style="background: var(--accent-teal); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold;"&gt;1&lt;/span&gt; Semantic Markup
+            &lt;/li&gt;
+            &lt;li style="counter-increment: custom-counter; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"&gt;
+                &lt;span style="background: var(--accent-teal); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold;"&gt;2&lt;/span&gt; Cascading Styling
+            &lt;/li&gt;
+            &lt;li style="counter-increment: custom-counter; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"&gt;
+                &lt;span style="background: var(--accent-teal); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold;"&gt;3&lt;/span&gt; Dynamic DOM Scripts
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;h4 style="margin-bottom: 0.75rem; color: var(--accent-primary);"&gt;Zebra-Striped Styled Table&lt;/h4&gt;
+        &lt;table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;"&gt;
+            &lt;tr style="background: rgba(99,102,241,0.2);"&gt;&lt;th style="padding: 0.5rem; text-align: left;"&gt;Item&lt;/th&gt;&lt;th style="padding: 0.5rem;"&gt;Price&lt;/th&gt;&lt;/tr&gt;
+            &lt;tr style="background: rgba(255,255,255,0.02);"&gt;&lt;td style="padding: 0.5rem;"&gt;Domain Name&lt;/td&gt;&lt;td style="padding: 0.5rem; text-align: center;"&gt;$12&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr style="background: rgba(255,255,255,0.06);"&gt;&lt;td style="padding: 0.5rem;"&gt;Web Hosting&lt;/td&gt;&lt;td style="padding: 0.5rem; text-align: center;"&gt;$45&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr style="background: rgba(255,255,255,0.02);"&gt;&lt;td style="padding: 0.5rem;"&gt;SSL Certificate&lt;/td&gt;&lt;td style="padding: 0.5rem; text-align: center;"&gt;Free&lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="css-11.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 CSS Program List</a>
+                </div>
+                <a href="css-13.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">CSS Programs Module &bull; Program 12 of 75 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

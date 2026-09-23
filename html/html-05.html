@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Program #05: Student Registration Form Using HTML Form Elements</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge">HTML #05</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="index.html" class="active">📄 HTML Programs</a>
+                <a href="../css/index.html">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">HTML Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #05</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="html-04.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All HTML</a>
+                    <a href="html-06.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card">
+                <span class="experiment-badge">EXPERIMENT #05 OF 15</span>
+                <h1 class="experiment-title">Student Registration Form Using HTML Form Elements</h1>
+                <p class="experiment-desc">Demonstrates comprehensive HTML form components including fieldsets, legends, labels, inputs, radios, checkboxes, dropdown selects, and textareas.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">html-05.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<form onsubmit="event.preventDefault(); alert('Form submitted successfully!');" style="background: var(--bg-card); padding: 1.75rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+    <fieldset style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.25rem;">
+        <legend style="padding: 0 0.5rem; color: var(--accent-teal); font-weight: 600;">Personal Information</legend>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+            <div>
+                <label class="form-label" for="stdName">Full Name *</label>
+                <input class="form-control" type="text" id="stdName" required placeholder="Enter student full name">
+            </div>
+            <div>
+                <label class="form-label" for="stdReg">Registration Number *</label>
+                <input class="form-control" type="text" id="stdReg" required placeholder="e.g. 21BCE1024">
+            </div>
+            <div>
+                <label class="form-label">Gender</label>
+                <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">
+                    <label style="color: var(--text-secondary); display: flex; align-items: center; gap: 0.3rem;"><input type="radio" name="gender" value="male" checked> Male</label>
+                    <label style="color: var(--text-secondary); display: flex; align-items: center; gap: 0.3rem;"><input type="radio" name="gender" value="female"> Female</label>
+                    <label style="color: var(--text-secondary); display: flex; align-items: center; gap: 0.3rem;"><input type="radio" name="gender" value="other"> Other</label>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.25rem;">
+        <legend style="padding: 0 0.5rem; color: var(--accent-primary); font-weight: 600;">Academic Enrollment</legend>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+            <div>
+                <label class="form-label" for="courseSelect">Degree Program</label>
+                <select class="form-control" id="courseSelect">
+                    <option>B.Tech Computer Science & Engineering</option>
+                    <option>B.Tech Information Technology</option>
+                    <option>B.Tech Artificial Intelligence & Data Science</option>
+                    <option>MCA Master of Computer Applications</option>
+                </select>
+            </div>
+            <div>
+                <label class="form-label">Specializations / Electives</label>
+                <div style="display: flex; flex-direction: column; gap: 0.35rem; margin-top: 0.25rem;">
+                    <label style="color: var(--text-secondary);"><input type="checkbox" checked> Cloud Architecture</label>
+                    <label style="color: var(--text-secondary);"><input type="checkbox" checked> Web Development Frameworks</label>
+                    <label style="color: var(--text-secondary);"><input type="checkbox"> Cybersecurity Principles</label>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <div style="margin-bottom: 1.25rem;">
+        <label class="form-label" for="stdAddress">Residential Address</label>
+        <textarea class="form-control" id="stdAddress" rows="3" placeholder="Enter permanent residential address"></textarea>
+    </div>
+    <div style="display: flex; gap: 1rem;">
+        <button type="submit" class="btn btn-primary">Submit Registration</button>
+        <button type="reset" class="btn btn-outline">Reset Form</button>
+    </div>
+</form>
+        
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-primary);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;form onsubmit="event.preventDefault(); alert('Form submitted successfully!');" style="background: var(--bg-card); padding: 1.75rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);"&gt;
+    &lt;fieldset style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.25rem;"&gt;
+        &lt;legend style="padding: 0 0.5rem; color: var(--accent-teal); font-weight: 600;"&gt;Personal Information&lt;/legend&gt;
+        &lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;"&gt;
+            &lt;div&gt;
+                &lt;label class="form-label" for="stdName"&gt;Full Name *&lt;/label&gt;
+                &lt;input class="form-control" type="text" id="stdName" required placeholder="Enter student full name"&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;label class="form-label" for="stdReg"&gt;Registration Number *&lt;/label&gt;
+                &lt;input class="form-control" type="text" id="stdReg" required placeholder="e.g. 21BCE1024"&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;label class="form-label"&gt;Gender&lt;/label&gt;
+                &lt;div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;"&gt;
+                    &lt;label style="color: var(--text-secondary); display: flex; align-items: center; gap: 0.3rem;"&gt;&lt;input type="radio" name="gender" value="male" checked&gt; Male&lt;/label&gt;
+                    &lt;label style="color: var(--text-secondary); display: flex; align-items: center; gap: 0.3rem;"&gt;&lt;input type="radio" name="gender" value="female"&gt; Female&lt;/label&gt;
+                    &lt;label style="color: var(--text-secondary); display: flex; align-items: center; gap: 0.3rem;"&gt;&lt;input type="radio" name="gender" value="other"&gt; Other&lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/fieldset&gt;
+    &lt;fieldset style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.25rem;"&gt;
+        &lt;legend style="padding: 0 0.5rem; color: var(--accent-primary); font-weight: 600;"&gt;Academic Enrollment&lt;/legend&gt;
+        &lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;"&gt;
+            &lt;div&gt;
+                &lt;label class="form-label" for="courseSelect"&gt;Degree Program&lt;/label&gt;
+                &lt;select class="form-control" id="courseSelect"&gt;
+                    &lt;option&gt;B.Tech Computer Science &amp; Engineering&lt;/option&gt;
+                    &lt;option&gt;B.Tech Information Technology&lt;/option&gt;
+                    &lt;option&gt;B.Tech Artificial Intelligence &amp; Data Science&lt;/option&gt;
+                    &lt;option&gt;MCA Master of Computer Applications&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;label class="form-label"&gt;Specializations / Electives&lt;/label&gt;
+                &lt;div style="display: flex; flex-direction: column; gap: 0.35rem; margin-top: 0.25rem;"&gt;
+                    &lt;label style="color: var(--text-secondary);"&gt;&lt;input type="checkbox" checked&gt; Cloud Architecture&lt;/label&gt;
+                    &lt;label style="color: var(--text-secondary);"&gt;&lt;input type="checkbox" checked&gt; Web Development Frameworks&lt;/label&gt;
+                    &lt;label style="color: var(--text-secondary);"&gt;&lt;input type="checkbox"&gt; Cybersecurity Principles&lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/fieldset&gt;
+    &lt;div style="margin-bottom: 1.25rem;"&gt;
+        &lt;label class="form-label" for="stdAddress"&gt;Residential Address&lt;/label&gt;
+        &lt;textarea class="form-control" id="stdAddress" rows="3" placeholder="Enter permanent residential address"&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;div style="display: flex; gap: 1rem;"&gt;
+        &lt;button type="submit" class="btn btn-primary"&gt;Submit Registration&lt;/button&gt;
+        &lt;button type="reset" class="btn btn-outline"&gt;Reset Form&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+        </code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="html-04.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary">📋 HTML Program List</a>
+                </div>
+                <a href="html-06.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">HTML Programs Module &bull; 15 of 212 Total Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

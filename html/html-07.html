@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Program #07: Webpage Using Frames and Iframes</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge">HTML #07</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="index.html" class="active">📄 HTML Programs</a>
+                <a href="../css/index.html">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">HTML Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #07</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="html-06.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All HTML</a>
+                    <a href="html-08.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card">
+                <span class="experiment-badge">EXPERIMENT #07 OF 15</span>
+                <h1 class="experiment-title">Webpage Using Frames and Iframes</h1>
+                <p class="experiment-desc">Demonstrates inline frames (<iframe>) with sandbox attributes, loading lazy, custom borders, responsive wrapping, and embedded sandbox content.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">html-07.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="display: flex; flex-direction: column; gap: 1.25rem;">
+    <div style="background: var(--bg-card); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+        <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;">Embedded Inline Frame (&lt;iframe&gt;)</h4>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Iframes embed independent HTML documents inside the parent page:</p>
+        <iframe srcdoc="<body style='font-family:sans-serif;background:%230f172a;color:%23f8fafc;padding:20px;text-align:center;'><h3>Embedded Document Inside IFrame</h3><p style='color:%2394a3b8;'>This content is rendered inside an isolated document frame.</p><button onclick='alert(&quot;Triggered from inside iframe!&quot;)' style='padding:8px 16px;background:%236366f1;color:%23fff;border:none;border-radius:6px;cursor:pointer;'>Click Me Inside Frame</button></body>" 
+                style="width: 100%; height: 200px; border: 1px solid var(--border-color); border-radius: var(--radius-md);" 
+                title="Interactive Iframe Demo" 
+                loading="lazy">
+        </iframe>
+    </div>
+</div>
+        
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-primary);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="display: flex; flex-direction: column; gap: 1.25rem;"&gt;
+    &lt;div style="background: var(--bg-card); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);"&gt;
+        &lt;h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;"&gt;Embedded Inline Frame (&amp;lt;iframe&amp;gt;)&lt;/h4&gt;
+        &lt;p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;"&gt;Iframes embed independent HTML documents inside the parent page:&lt;/p&gt;
+        &lt;iframe srcdoc="&lt;body style='font-family:sans-serif;background:%230f172a;color:%23f8fafc;padding:20px;text-align:center;'&gt;&lt;h3&gt;Embedded Document Inside IFrame&lt;/h3&gt;&lt;p style='color:%2394a3b8;'&gt;This content is rendered inside an isolated document frame.&lt;/p&gt;&lt;button onclick='alert(&amp;quot;Triggered from inside iframe!&amp;quot;)' style='padding:8px 16px;background:%236366f1;color:%23fff;border:none;border-radius:6px;cursor:pointer;'&gt;Click Me Inside Frame&lt;/button&gt;&lt;/body&gt;" 
+                style="width: 100%; height: 200px; border: 1px solid var(--border-color); border-radius: var(--radius-md);" 
+                title="Interactive Iframe Demo" 
+                loading="lazy"&gt;
+        &lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="html-06.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary">📋 HTML Program List</a>
+                </div>
+                <a href="html-08.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">HTML Programs Module &bull; 15 of 212 Total Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

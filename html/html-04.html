@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Program #04: HTML Page Containing Images and Hyperlinks</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge">HTML #04</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="index.html" class="active">📄 HTML Programs</a>
+                <a href="../css/index.html">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">HTML Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #04</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="html-03.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All HTML</a>
+                    <a href="html-05.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card">
+                <span class="experiment-badge">EXPERIMENT #04 OF 15</span>
+                <h1 class="experiment-title">HTML Page Containing Images and Hyperlinks</h1>
+                <p class="experiment-desc">Illustrates relative and absolute image paths, alt attributes, figure/figcaption, external links (_blank), internal anchor bookmarks, and mailto links.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">html-04.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="display: flex; flex-direction: column; gap: 1.5rem;">
+    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+        <figure style="margin: 0; text-align: center;">
+            <svg width="220" height="140" style="border-radius: var(--radius-md); background: linear-gradient(135deg, #4f46e5, #06b6d4);">
+                <text x="50%" y="45%" text-anchor="middle" fill="#ffffff" font-size="16" font-family="sans-serif" font-weight="bold">Responsive Web</text>
+                <text x="50%" y="65%" text-anchor="middle" fill="#e0e7ff" font-size="12" font-family="sans-serif">Vector Image Demo (SVG)</text>
+            </svg>
+            <figcaption style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Figure: High-Resolution Scalable Vector Artwork</figcaption>
+        </figure>
+        <div style="flex: 1; min-width: 250px;">
+            <h3 style="margin-bottom: 0.75rem; color: var(--text-primary);">Navigation Hyperlinks</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">HTML provides standard attributes for linking documents, pages, and section bookmarks.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                <a href="#target-section" class="btn btn-primary btn-sm">Go to Bookmark Target ↓</a>
+                <a href="https://developer.mozilla.org" target="_blank" rel="noopener" class="btn btn-outline btn-sm">MDN Web Docs ↗</a>
+                <a href="mailto:student@example.edu" class="btn btn-outline btn-sm">✉ Send Email</a>
+            </div>
+        </div>
+    </div>
+    <div id="target-section" style="padding: 1.25rem; background: rgba(99, 102, 241, 0.1); border: 1px dashed var(--accent-primary); border-radius: var(--radius-md);">
+        <h4 style="color: var(--accent-primary); margin-bottom: 0.25rem;">Bookmark Target Section Reached (#target-section)</h4>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">You navigated directly to this internal bookmark using anchor fragment navigation.</p>
+    </div>
+</div>
+        
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-primary);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="display: flex; flex-direction: column; gap: 1.5rem;"&gt;
+    &lt;div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);"&gt;
+        &lt;figure style="margin: 0; text-align: center;"&gt;
+            &lt;svg width="220" height="140" style="border-radius: var(--radius-md); background: linear-gradient(135deg, #4f46e5, #06b6d4);"&gt;
+                &lt;text x="50%" y="45%" text-anchor="middle" fill="#ffffff" font-size="16" font-family="sans-serif" font-weight="bold"&gt;Responsive Web&lt;/text&gt;
+                &lt;text x="50%" y="65%" text-anchor="middle" fill="#e0e7ff" font-size="12" font-family="sans-serif"&gt;Vector Image Demo (SVG)&lt;/text&gt;
+            &lt;/svg&gt;
+            &lt;figcaption style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;"&gt;Figure: High-Resolution Scalable Vector Artwork&lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;div style="flex: 1; min-width: 250px;"&gt;
+            &lt;h3 style="margin-bottom: 0.75rem; color: var(--text-primary);"&gt;Navigation Hyperlinks&lt;/h3&gt;
+            &lt;p style="color: var(--text-secondary); margin-bottom: 1rem;"&gt;HTML provides standard attributes for linking documents, pages, and section bookmarks.&lt;/p&gt;
+            &lt;div style="display: flex; flex-wrap: wrap; gap: 0.75rem;"&gt;
+                &lt;a href="#target-section" class="btn btn-primary btn-sm"&gt;Go to Bookmark Target ↓&lt;/a&gt;
+                &lt;a href="https://developer.mozilla.org" target="_blank" rel="noopener" class="btn btn-outline btn-sm"&gt;MDN Web Docs ↗&lt;/a&gt;
+                &lt;a href="mailto:student@example.edu" class="btn btn-outline btn-sm"&gt;✉ Send Email&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id="target-section" style="padding: 1.25rem; background: rgba(99, 102, 241, 0.1); border: 1px dashed var(--accent-primary); border-radius: var(--radius-md);"&gt;
+        &lt;h4 style="color: var(--accent-primary); margin-bottom: 0.25rem;"&gt;Bookmark Target Section Reached (#target-section)&lt;/h4&gt;
+        &lt;p style="color: var(--text-secondary); font-size: 0.9rem;"&gt;You navigated directly to this internal bookmark using anchor fragment navigation.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="html-03.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary">📋 HTML Program List</a>
+                </div>
+                <a href="html-05.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">HTML Programs Module &bull; 15 of 212 Total Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

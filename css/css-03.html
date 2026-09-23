@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Program #03: CSS Colors, Backgrounds, and Borders</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge" style="background: linear-gradient(135deg, var(--accent-teal), var(--accent-primary));">CSS #03</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="../html/index.html">📄 HTML Programs</a>
+                <a href="index.html" class="active">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">CSS Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #03</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="css-02.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All CSS</a>
+                    <a href="css-04.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card" style="border-left-color: var(--accent-teal);">
+                <span class="experiment-badge" style="color: var(--accent-teal); background: rgba(20, 184, 166, 0.12);">EXPERIMENT #03 OF 75</span>
+                <h1 class="experiment-title">CSS Colors, Backgrounds, and Borders</h1>
+                <p class="experiment-desc">Showcases RGB, RGBA, HSL, HEX colors, border styles (solid, dashed, dotted, double), and background properties.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge" style="background: var(--accent-teal); box-shadow: 0 0 8px var(--accent-teal);"></span> Live CSS Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">css-03.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+    <div style="background: #4f46e5; border: 3px solid #818cf8; color: white; padding: 1rem; border-radius: 8px; text-align: center;">HEX Color & Solid Border</div>
+    <div style="background: rgba(16, 185, 129, 0.25); border: 3px dashed #10b981; color: #10b981; padding: 1rem; border-radius: 8px; text-align: center;">RGBA Alpha & Dashed Border</div>
+    <div style="background: hsl(330, 80%, 40%); border: 3px double #f472b6; color: white; padding: 1rem; border-radius: 8px; text-align: center;">HSL Color & Double Border</div>
+    <div style="background: linear-gradient(135deg, #f59e0b, #ec4899); border: 3px dotted #ffffff; color: white; padding: 1rem; border-radius: 8px; text-align: center;">Gradient & Dotted Border</div>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-teal);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;"&gt;
+    &lt;div style="background: #4f46e5; border: 3px solid #818cf8; color: white; padding: 1rem; border-radius: 8px; text-align: center;"&gt;HEX Color &amp; Solid Border&lt;/div&gt;
+    &lt;div style="background: rgba(16, 185, 129, 0.25); border: 3px dashed #10b981; color: #10b981; padding: 1rem; border-radius: 8px; text-align: center;"&gt;RGBA Alpha &amp; Dashed Border&lt;/div&gt;
+    &lt;div style="background: hsl(330, 80%, 40%); border: 3px double #f472b6; color: white; padding: 1rem; border-radius: 8px; text-align: center;"&gt;HSL Color &amp; Double Border&lt;/div&gt;
+    &lt;div style="background: linear-gradient(135deg, #f59e0b, #ec4899); border: 3px dotted #ffffff; color: white; padding: 1rem; border-radius: 8px; text-align: center;"&gt;Gradient &amp; Dotted Border&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="css-02.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary" style="background: var(--accent-teal);">📋 CSS Program List</a>
+                </div>
+                <a href="css-04.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">CSS Programs Module &bull; Program 3 of 75 Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

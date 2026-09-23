@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Program #09: HTML5 Input Types (email, date, number, password, color, range)</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span>⚡ Practical Lab</span>
+                <span class="brand-badge">HTML #09</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">🏠 Home</a>
+                <a href="index.html" class="active">📄 HTML Programs</a>
+                <a href="../css/index.html">🎨 CSS Programs</a>
+                <a href="../javascript/index.html">⚙️ JS Programs</a>
+            </div>
+            <button id="themeToggleBtn" class="theme-toggle-btn">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="program-page-container">
+            <!-- Navigation Breadcrumbs -->
+            <div class="program-nav-bar">
+                <div class="nav-breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html">HTML Programs</a>
+                    <span class="separator">/</span>
+                    <span style="color: var(--text-primary); font-weight: 600;">Program #09</span>
+                </div>
+                <div class="nav-controls">
+                    <a href="html-08.html" class="btn btn-outline btn-sm btn-prev" style="">⬅ Prev</a>
+                    <a href="index.html" class="btn btn-outline btn-sm">📋 All HTML</a>
+                    <a href="html-10.html" class="btn btn-outline btn-sm btn-next" style="">Next ➡</a>
+                </div>
+            </div>
+
+            <!-- Experiment Title & Description -->
+            <div class="experiment-header-card">
+                <span class="experiment-badge">EXPERIMENT #09 OF 15</span>
+                <h1 class="experiment-title">HTML5 Input Types (email, date, number, password, color, range)</h1>
+                <p class="experiment-desc">Demonstrates modern HTML5 form input types with built-in browser validation, pickers, and interactive values.</p>
+            </div>
+
+            <!-- Demonstration Section -->
+            <div class="demo-section">
+                <div class="demo-bar">
+                    <span class="demo-title"><span class="demo-badge"></span> Live Interactive Demonstration</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">html-09.html</span>
+                </div>
+                <div class="demo-content">
+                    
+<form onsubmit="event.preventDefault(); alert('All input values are valid!');" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+    <div>
+        <label class="form-label" for="inpEmail">Email Input (type="email")</label>
+        <input class="form-control" type="email" id="inpEmail" required placeholder="user@example.com">
+    </div>
+    <div>
+        <label class="form-label" for="inpPass">Password (type="password")</label>
+        <input class="form-control" type="password" id="inpPass" required placeholder="••••••••">
+    </div>
+    <div>
+        <label class="form-label" for="inpNum">Numeric Stepper (type="number")</label>
+        <input class="form-control" type="number" id="inpNum" min="1" max="100" value="25">
+    </div>
+    <div>
+        <label class="form-label" for="inpDate">Date Picker (type="date")</label>
+        <input class="form-control" type="date" id="inpDate" value="2026-09-23">
+    </div>
+    <div>
+        <label class="form-label" for="inpColor">Color Picker (type="color")</label>
+        <input class="form-control" type="color" id="inpColor" value="#6366f1" style="height: 42px; padding: 4px; cursor: pointer;">
+    </div>
+    <div>
+        <label class="form-label" for="inpRange">Range Slider (type="range")</label>
+        <input type="range" id="inpRange" min="0" max="100" value="75" style="width: 100%; margin-top: 0.75rem;" oninput="document.getElementById('rangeVal').innerText = this.value">
+        <span style="font-size: 0.85rem; color: var(--accent-teal);">Value: <strong id="rangeVal">75</strong>%</span>
+    </div>
+    <div style="grid-column: 1 / -1; margin-top: 0.5rem;">
+        <button type="submit" class="btn btn-primary">Test HTML5 Built-In Validation</button>
+    </div>
+</form>
+        
+                </div>
+            </div>
+
+            <!-- Source Code Drawer -->
+            <div class="code-section">
+                <div class="code-header">
+                    <span class="code-header-title">💻 Source Code Inspector</span>
+                    <span class="code-arrow" style="font-size: 0.85rem; color: var(--accent-primary);">▼ View Code</span>
+                </div>
+                <div class="code-content">
+                    <pre><code>
+&lt;form onsubmit="event.preventDefault(); alert('All input values are valid!');" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);"&gt;
+    &lt;div&gt;
+        &lt;label class="form-label" for="inpEmail"&gt;Email Input (type="email")&lt;/label&gt;
+        &lt;input class="form-control" type="email" id="inpEmail" required placeholder="user@example.com"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label class="form-label" for="inpPass"&gt;Password (type="password")&lt;/label&gt;
+        &lt;input class="form-control" type="password" id="inpPass" required placeholder="••••••••"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label class="form-label" for="inpNum"&gt;Numeric Stepper (type="number")&lt;/label&gt;
+        &lt;input class="form-control" type="number" id="inpNum" min="1" max="100" value="25"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label class="form-label" for="inpDate"&gt;Date Picker (type="date")&lt;/label&gt;
+        &lt;input class="form-control" type="date" id="inpDate" value="2026-09-23"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label class="form-label" for="inpColor"&gt;Color Picker (type="color")&lt;/label&gt;
+        &lt;input class="form-control" type="color" id="inpColor" value="#6366f1" style="height: 42px; padding: 4px; cursor: pointer;"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label class="form-label" for="inpRange"&gt;Range Slider (type="range")&lt;/label&gt;
+        &lt;input type="range" id="inpRange" min="0" max="100" value="75" style="width: 100%; margin-top: 0.75rem;" oninput="document.getElementById('rangeVal').innerText = this.value"&gt;
+        &lt;span style="font-size: 0.85rem; color: var(--accent-teal);"&gt;Value: &lt;strong id="rangeVal"&gt;75&lt;/strong&gt;%&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style="grid-column: 1 / -1; margin-top: 0.5rem;"&gt;
+        &lt;button type="submit" class="btn btn-primary"&gt;Test HTML5 Built-In Validation&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+        </code></pre>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav-bar">
+                <a href="html-08.html" class="btn btn-outline btn-prev" style="">⬅ Previous Program</a>
+                <div style="display: flex; gap: 0.5rem;">
+                    <a href="../index.html" class="btn btn-outline">🏠 Dashboard</a>
+                    <a href="index.html" class="btn btn-primary">📋 HTML Program List</a>
+                </div>
+                <a href="html-10.html" class="btn btn-outline btn-next" style="">Next Program ➡</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Student Name: <span class="footer-highlight">M.Surya Nivas Reddy</span> | Assignment: <span class="footer-highlight">HTML, CSS & JavaScript Practical Assignment</span></p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">HTML Programs Module &bull; 15 of 212 Total Completed</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>
